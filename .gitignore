@@ -5,7 +5,7 @@ data/settings.json
 data/channels.json
 *.session
 .env
-
+.claude/
 # Python
 __pycache__/
 *.pyc
