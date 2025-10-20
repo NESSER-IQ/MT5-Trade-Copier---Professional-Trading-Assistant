@@ -1,0 +1,27 @@
+{
+    "date": "2025-10-16",
+    "total_signals": 1,
+    "signals_by_channel": {
+        "Test Channel": {
+            "count": 1,
+            "symbols": {
+                "XAUUSD": 1
+            }
+        }
+    },
+    "signals": [
+        {
+            "symbol": "XAUUSD",
+            "action": "BUY",
+            "entry_price": 4218.0,
+            "take_profits": [
+                4222.0,
+                4226.0,
+                4230.0
+            ],
+            "stop_loss": 4205.0,
+            "channel_name": "Test Channel",
+            "received_at": "2025-10-16T21:00:49.489904"
+        }
+    ]
+}

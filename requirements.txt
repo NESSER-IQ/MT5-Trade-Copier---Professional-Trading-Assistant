@@ -1,0 +1,12 @@
+telethon
+MetaTrader5
+customtkinter
+Pillow
+python-dotenv
+matplotlib
+pandas
+numpy
+customtkinter
+python-dotenv
+telethon
+matplotlib

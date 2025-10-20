@@ -1,0 +1,17 @@
+# بيانات حساسة
+data/*.enc
+data/*.key
+data/settings.json
+data/channels.json
+*.session
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

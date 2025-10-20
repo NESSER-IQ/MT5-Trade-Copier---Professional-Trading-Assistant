@@ -1,0 +1,3426 @@
+[
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4110.3,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0,
+            4201.0,
+            4214.0,
+            4218.0,
+            4222.0,
+            4226.0,
+            4230.0
+        ],
+        "stop_loss": 4201.0,
+        "timestamp": "2025-10-15T17:15:33.094589",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "XAUUSD BUY NOW @ 4110.30\n\n       Tp1: 4214.00\n       Tp2: 4218.00\n       Tp3: 4222.00\n       Tp4: 4226.00\n       Tp5: 4230.00\n       Tp6: 4234.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4201.00",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0,
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-15T17:33:50.845986",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP1 HIT🔼🔼\n\n40 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0,
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-15T17:34:21.523059",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP2 HIT🔼🔼\n\n80 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            3.0,
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-15T17:39:16.340899",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP3 HIT🔼🔼\n\n120 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4.0,
+            160.0
+        ],
+        "stop_loss": 160.0,
+        "timestamp": "2025-10-15T17:40:00.505680",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP4 HIT🔼🔼\n\n160 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4217.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T18:08:38.596323",
+        "channel_name": "Forex Sure Trading",
+        "raw_message": "GOLD BUY NOW 4217",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4217.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4237.0
+        ],
+        "stop_loss": 4209.0,
+        "timestamp": "2025-10-15T18:11:29.387570",
+        "channel_name": "Forex Sure Trading",
+        "raw_message": "XAUUSD  BUY   NOW 4217\n                                 \n🌟 TAKE PROFIT 4237\n    \n☄️ STOP LOSE       4209\n\n⚠️ USE LOTS ACCORDING TO \nYOUR ACCOUNT EQUITY BALANCE",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4218.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4222.0,
+            4226.0,
+            4230.0,
+            4233.0
+        ],
+        "stop_loss": 4205.0,
+        "timestamp": "2025-10-15T18:23:22.219246",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "GOLD XAUUSD Buy 4218/4215\n\n\nTP 4222\nTP 4226\nTP 4230\nTP 4233\n\nSL. 4205",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4224.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4205.0,
+            4211.0,
+            4216.0,
+            4220.0
+        ],
+        "stop_loss": 4239.0,
+        "timestamp": "2025-10-15T18:27:05.534202",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD SELL 4224\n\nTP 4220\nTP 4216\nTP 4211\nTP 4205\nSL 4239",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4227.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4211.0,
+            4215.0,
+            4219.0,
+            4223.0
+        ],
+        "stop_loss": 4240.0,
+        "timestamp": "2025-10-15T18:30:18.640687",
+        "channel_name": "𝙂𝙤𝙡𝙙 𝙋𝙧𝙤 𝙎𝙞𝙜𝙣𝙖𝙡",
+        "raw_message": "XAUUSD Sell  4227/29\n\nTP.   4223\nTP.   4219\nTP.   4215\nTP.   4211\n\nSL.  4240\n\nUse small Lots is Life Of Capital",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "SELL",
+        "entry_price": 110700.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111000.0,
+            111300.0,
+            111600.0
+        ],
+        "stop_loss": 119500.0,
+        "timestamp": "2025-10-15T18:33:29.542728",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "BTCUSD Sell Now 110700\n\n\nTP 111000\nTP 111300\nTP 111600\n\nSL 119500",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4223.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4204.0,
+            4207.0,
+            4210.0,
+            4213.0,
+            4216.0,
+            4219.0
+        ],
+        "stop_loss": 4235.0,
+        "timestamp": "2025-10-15T18:35:31.579766",
+        "channel_name": "Trade with Pat 🆓 (FRN)",
+        "raw_message": "#XAUUSD   SELL  4223✅\n\nSl      4235\n\n\nTP     4219✅\nTP     4216✅\nTP     4213✅\nTP     4210✅\nTP     4207✅\nTP     4204✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 109100.0,
+        "entry_price_range": null,
+        "take_profits": [
+            109200.0,
+            109200.0,
+            109300.0,
+            109400.0
+        ],
+        "stop_loss": 109000.0,
+        "timestamp": "2025-10-15T18:55:26.280466",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD \nBUY 109100\nTP ..109200\nTP ..109200\nTP...109300\nTP...109400\nSL...109000",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4226.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4228.0,
+            4230.0,
+            4232.0,
+            4234.0,
+            4236.0,
+            4238.0,
+            4240.0
+        ],
+        "stop_loss": 4212.0,
+        "timestamp": "2025-10-15T18:55:41.755408",
+        "channel_name": "🚀𝐅𝐗 𝐆𝐑𝐄𝐄𝐍 𝐏𝐈𝐏𝐒🚀",
+        "raw_message": "✅XAUUSD BUY 4226\n\n✔️TP1    4228\n✔️TP2    4230\n✔️TP3    4232\n✔️TP4    4234\n✔️TP5    4236\n✔️TP6    4238\n✔️TP7    4240\n\n❌Sl  4212",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            5.0,
+            200.0
+        ],
+        "stop_loss": 200.0,
+        "timestamp": "2025-10-15T18:56:28.473867",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP5 HIT🔼🔼\n\n200 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111300.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111400.0,
+            111500.0,
+            111600.0,
+            111700.0,
+            111800.0,
+            111900.0,
+            120000.0
+        ],
+        "stop_loss": 110700.0,
+        "timestamp": "2025-10-15T18:57:58.573426",
+        "channel_name": "🚀𝐅𝐗 𝐆𝐑𝐄𝐄𝐍 𝐏𝐈𝐏𝐒🚀",
+        "raw_message": "✅BTCUSD BUY 111300\n\n✔️TP1    111400\n✔️TP2    111500\n✔️TP3    111600\n✔️TP4    111700\n✔️TP5    111800\n✔️TP6    111900\n✔️TP7    120000\n\n❌Sl  110700",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4233.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4210.0,
+            4220.0,
+            4229.0
+        ],
+        "stop_loss": 4244.0,
+        "timestamp": "2025-10-15T19:05:23.224353",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "🔵XAUUSD_GOLD SELL 4233\n\n\n🔳TP : 4229.00\n🔳TP : 4220.00\n🔳TP : 4210.00\n\n❌SL : 4244.000",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4233.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4220.0,
+            4225.0,
+            4229.0
+        ],
+        "stop_loss": 4241.0,
+        "timestamp": "2025-10-15T19:08:44.222634",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑺𝑵𝑰𝑷𝑬𝑹𝑺",
+        "raw_message": "✅#XAUUSD SELL 4233/4236\n\n✅TP 4229\n✅TP 4225\n✅TP 4220\n\n❌SL 4241",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 40.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T19:13:34.718048",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ¹ Achieved bye 40+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 80.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T19:14:14.059102",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ² Achieved bye 80+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 120.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T19:14:34.321178",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ³ Achieved bye 120+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 150.0,
+        "entry_price_range": null,
+        "take_profits": [
+            150.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T19:15:01.866737",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ⁴ Achieved bye 150+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPUSD",
+        "action": "BUY",
+        "entry_price": 1.342,
+        "entry_price_range": null,
+        "take_profits": [
+            1.344,
+            1.347,
+            1.349
+        ],
+        "stop_loss": 1.338,
+        "timestamp": "2025-10-15T19:15:35.141347",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "GBPUSD BUY 1.34200\n\nTP 1.34400\nTP 1.34700\nTP 1.34900\nSL 1.33800",
+        "status": "pending"
+    },
+    {
+        "symbol": "USDJPY",
+        "action": "BUY",
+        "entry_price": 150.5,
+        "entry_price_range": null,
+        "take_profits": [
+            150.7,
+            151.0,
+            151.2
+        ],
+        "stop_loss": 150.1,
+        "timestamp": "2025-10-15T19:15:38.985646",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "USDJPY BUY 150.500\n\nTP 150.700\nTP 151.000\nTP 151.200\nSL 150.100",
+        "status": "pending"
+    },
+    {
+        "symbol": "EURJPY",
+        "action": "SELL",
+        "entry_price": 175.0,
+        "entry_price_range": null,
+        "take_profits": [
+            175.1,
+            175.4,
+            175.7
+        ],
+        "stop_loss": 176.4,
+        "timestamp": "2025-10-15T19:15:45.551725",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "EURJPY SELL 175 900\n\nTP 175.700\nTP 175.400\nTP 175.100\nSL 176.400",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPJPY",
+        "action": "SELL",
+        "entry_price": 202.4,
+        "entry_price_range": null,
+        "take_profits": [
+            201.8,
+            202.0,
+            202.2
+        ],
+        "stop_loss": 202.8,
+        "timestamp": "2025-10-15T19:15:53.431907",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "GBPJPY SELL 202.400\n\nTP 202.200\nTP 202.000\nTP 201.800\nSL 202.800",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPAUD",
+        "action": "SELL",
+        "entry_price": 2.068,
+        "entry_price_range": null,
+        "take_profits": [
+            2.061,
+            2.063,
+            2.066
+        ],
+        "stop_loss": 2.073,
+        "timestamp": "2025-10-15T19:16:02.250458",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "GBPAUD SELL 2.06800\n\nTP 2.06600\nTP 2.06300\nTP 2.06100\nSL 2.07300",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 150.0,
+        "entry_price_range": null,
+        "take_profits": [
+            150.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T19:16:12.197893",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy\n\nTarget All Achieved bye 150+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4233.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4236.0,
+            4238.0,
+            4241.0,
+            4244.0,
+            4247.0,
+            4250.0
+        ],
+        "stop_loss": 4220.0,
+        "timestamp": "2025-10-15T19:16:56.269390",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "😑GOLD BUY 4233/4229\n\nTP 4236\nTP 4238\nTP 4241\nTP 4244\nTP 4247\nTP 4250\n\nSL 4220",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": null,
+        "entry_price_range": [
+            4228.0,
+            4232.0
+        ],
+        "take_profits": [
+            4234.0,
+            4236.0,
+            4238.0,
+            4240.0,
+            4242.0,
+            4244.0,
+            4246.0,
+            4248.0
+        ],
+        "stop_loss": 4222.0,
+        "timestamp": "2025-10-15T19:17:08.067233",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "⭐️GOLD BUY NOW 4232/4228\n\n📈TP 4234\n📈TP 4236\n📈TP 4238\n📈TP 4240\n📈TP 4242\n📈TP 4244\n📈TP 4246\n📈TP 4248🎯\n\n❌SL 4222",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4234.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4218.0,
+            4222.0,
+            4226.0,
+            4230.0
+        ],
+        "stop_loss": 4245.0,
+        "timestamp": "2025-10-15T19:18:07.470608",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙀𝙓𝙋𝙀𝙍𝙏 𝙎𝘾𝘼𝙇𝙋𝙀𝙍",
+        "raw_message": "XAUUSD SELL 4234\n\nTP 4230\nTP 4226\nTP 4222\nTP 4218\n\nSL 4245",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4232.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4236.0,
+            4239.0,
+            4242.0,
+            4245.0,
+            4248.0
+        ],
+        "stop_loss": 4220.0,
+        "timestamp": "2025-10-15T19:19:52.066329",
+        "channel_name": "𝙒𝙊𝙍𝙇𝘿 𝙁𝙊𝙍𝙀𝙓 𝙎𝙄𝙉𝙂𝘼𝙇𝙎",
+        "raw_message": "XAUUSD_GOLD BUY  4232\n\nTP : 4236\nTP : 4239\nTP : 4242\nTP : 4245\nTP : 4248\n\nSL : 4220",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4230.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4234.0,
+            4238.0,
+            4242.0,
+            4246.0,
+            4250.0,
+            4254.0,
+            4258.0
+        ],
+        "stop_loss": 4215.0,
+        "timestamp": "2025-10-15T19:20:12.401873",
+        "channel_name": "TRADING WITH AHMED",
+        "raw_message": "XAUUSD BUY 4230\nMORE BUY  4226\n\nTP  4234\nTP  4238\nTP  4242\nTP  4246\nTP  4250\nTP  4254\nTP  4258\n\nSL  4215",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111200.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111500.0,
+            111800.0,
+            112100.0,
+            112400.0
+        ],
+        "stop_loss": 110400.0,
+        "timestamp": "2025-10-15T19:21:51.101306",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙀𝙓𝙋𝙀𝙍𝙏 𝙎𝘾𝘼𝙇𝙋𝙀𝙍",
+        "raw_message": "BTCUSD BUY 111200\n\nTP¹ 111500\nTP² 111800\nTP³ 112100\nTP⁴ 112400\n\nSL  110400",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4230.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4218.0,
+            4221.0,
+            4224.0,
+            4227.0
+        ],
+        "stop_loss": 4256.0,
+        "timestamp": "2025-10-15T19:38:37.368843",
+        "channel_name": "XAUUSD GOLD MASTER",
+        "raw_message": "XAUUSD SELL 4230_4232\n\nTP¹.  4227\nTP².  4224\nTP³.  4221\nTP⁴.  4218\n\nSL.   4256\n\nUse Money Management",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            6.0,
+            250.0
+        ],
+        "stop_loss": 250.0,
+        "timestamp": "2025-10-15T19:50:18.371505",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_BUY🔼🔼\n\n🔼🔼TP6 HIT🔼🔼\n\n250 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 40.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:00:10.351199",
+        "channel_name": "𝙒𝙊𝙍𝙇𝘿 𝙁𝙊𝙍𝙀𝙓 𝙎𝙄𝙉𝙂𝘼𝙇𝙎",
+        "raw_message": "#XAUUSD BUY\nTP¹ HIT40+PIPS PROFIT DONE BOOM",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 70.0,
+        "entry_price_range": null,
+        "take_profits": [
+            70.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:00:37.137489",
+        "channel_name": "𝙒𝙊𝙍𝙇𝘿 𝙁𝙊𝙍𝙀𝙓 𝙎𝙄𝙉𝙂𝘼𝙇𝙎",
+        "raw_message": "#XAUUSD BUY\nTP² HIT70+PIPS PROFIT DONE BOOM",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4240.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4228.0,
+            4231.0,
+            4234.0,
+            4237.0
+        ],
+        "stop_loss": 4260.0,
+        "timestamp": "2025-10-15T20:03:44.657884",
+        "channel_name": "XAUUSD GOLD MASTER",
+        "raw_message": "#XAUUSD sell 4240/4245\n\nTP¹: 4237\nTP²: 4234\nTP³: 4231\nTP⁴  4228\n\n\n\nSL: 4260\n👌👌👍",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4242.4245,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:12:50.598884",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD SELL 4242.4245",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4242.4245,
+        "entry_price_range": null,
+        "take_profits": [
+            4210.0,
+            4223.0,
+            4227.0,
+            4230.0,
+            4233.0,
+            4237.0
+        ],
+        "stop_loss": 4254.0,
+        "timestamp": "2025-10-15T20:13:38.150256",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD SELL 4242.4245\nSL 4254\nTP 4237\nTP 4233\nTP 4230\nTP 4227\nTP 4223\nTP 4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 300.0,
+        "entry_price_range": null,
+        "take_profits": [
+            300.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:23:05.226665",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Btcusd Buy\n\nTarget ¹ Achieved bye 300+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 800.0,
+        "entry_price_range": null,
+        "take_profits": [
+            800.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:23:40.430296",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Btcusd Buy\n\nTarget ³ Achieved bye 800+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 800.0,
+        "entry_price_range": null,
+        "take_profits": [
+            800.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:24:37.738120",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Btcusd Buy\n\nTarget All Achieved bye 800+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            50.0
+        ],
+        "stop_loss": 50.0,
+        "timestamp": "2025-10-15T20:25:17.155740",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP1 HlT 50+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-15T20:25:38.374637",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP2 HlT 80+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4235.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4238.0,
+            4241.0,
+            4244.0,
+            4247.0
+        ],
+        "stop_loss": 4226.0,
+        "timestamp": "2025-10-15T20:29:17.271925",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Buy 4235\n\nTP 4238\nTP 4241\nTP 4244\nTP 4247\n\nSL 4226",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4238.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4226.0,
+            4229.0,
+            4232.0,
+            4235.0
+        ],
+        "stop_loss": 4251.0,
+        "timestamp": "2025-10-15T20:29:41.743527",
+        "channel_name": "TRADE WITH HASAAN",
+        "raw_message": "#XAUUSD #GOLD SELL 4238-4241\n\nTP 4235\nTP 4232\nTP 4229\nTP 4226\n\nSL 4251\n\n\nFollow Proper Money Management! ✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111600.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111900.0,
+            112200.0,
+            112500.0
+        ],
+        "stop_loss": 111000.0,
+        "timestamp": "2025-10-15T20:30:45.396053",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "BTCUSD Buy 111600\n\n\nTP 111900\nTP 112200\nTP 112500\n\n\nSL 111000",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111400.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111700.0,
+            112000.0,
+            112300.0
+        ],
+        "stop_loss": 109900.0,
+        "timestamp": "2025-10-15T20:31:55.818570",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "BTCUSD Buy 111400\n\n\nTP 111700\nTP 112000\nTP 112300\n\n\nSL 109900",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111400.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111700.0,
+            112000.0,
+            112300.0
+        ],
+        "stop_loss": 1109900.0,
+        "timestamp": "2025-10-15T20:32:29.499059",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "BTCUSD Buy 111400\n\n\nTP 111700\nTP 112000\nTP 112300\n\n\nSL 1109900",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4236.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4225.0,
+            4227.0,
+            4229.0,
+            4231.0,
+            4233.0
+        ],
+        "stop_loss": 4246.0,
+        "timestamp": "2025-10-15T20:32:58.705331",
+        "channel_name": "XAUUSD VIP SIGNALS",
+        "raw_message": "XAUUSD SELL 4236_4239\nTP 4233\nTP 4231\nTP 4229\nTP 4227\nTP 4225\nSL 4246",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 111400.0,
+        "entry_price_range": null,
+        "take_profits": [
+            111700.0,
+            112000.0,
+            112300.0
+        ],
+        "stop_loss": 110700.0,
+        "timestamp": "2025-10-15T20:33:24.572154",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "BTCUSD Buy 111400\n\n\nTP 111700\nTP 112000\nTP 112300\n\n\nSL 110700",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPJPY",
+        "action": "BUY",
+        "entry_price": 202.0,
+        "entry_price_range": null,
+        "take_profits": [
+            400.0,
+            600.0,
+            800.0
+        ],
+        "stop_loss": 700.0,
+        "timestamp": "2025-10-15T20:34:33.213083",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "GBPJPY Buy 202:100\n\n\nTP 202:400\nTP 202:600\nTP 202:800\n\n\nSL 201:700",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-15T20:45:55.244908",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP3 HlT 120+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 130.0,
+        "entry_price_range": null,
+        "take_profits": [
+            130.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T20:46:54.494388",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nRunning 130+ PIP'S PROFIT DONE BOOM 😍❤️\n\nBook same profit",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            30.0
+        ],
+        "stop_loss": 30.0,
+        "timestamp": "2025-10-15T20:48:45.310271",
+        "channel_name": "Gold Hunter Trade",
+        "raw_message": "XAUUSD BUY TP 1 HiT with 30+ PiPS Enjoy Profits ✅✅🎉🎉😮😮🛡🛡",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-15T20:49:03.144468",
+        "channel_name": "Gold Hunter Trade",
+        "raw_message": "XAUUSD BUY TP 2 HiT with 60+ PiPS Enjoy Profits ✅✅🎉🎉😮😮🛡🛡",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            90.0
+        ],
+        "stop_loss": 90.0,
+        "timestamp": "2025-10-15T20:49:16.540379",
+        "channel_name": "Gold Hunter Trade",
+        "raw_message": "XAUUSD BUY TP 3 HiT with 90+ PiPS Enjoy Profits ✅✅🎉🎉😮😮🛡🛡",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-15T20:49:35.267947",
+        "channel_name": "Gold Hunter Trade",
+        "raw_message": "XAUUSD BUY TP 4 HiT with 120+ PiPS Enjoy Profits ✅✅🎉🎉😮😮🛡🛡",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4195.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4225.0
+        ],
+        "stop_loss": 4189.0,
+        "timestamp": "2025-10-15T20:51:34.883639",
+        "channel_name": "Gold Expert Fx",
+        "raw_message": "GOLD BUY NOW \n\nENTRY 4195 \n\n\nTARGET 4225🏆\n\nSL 4189❌",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4229.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4232.0,
+            4235.0,
+            4238.0,
+            4241.0,
+            4244.0,
+            4247.0,
+            4250.0,
+            4253.0
+        ],
+        "stop_loss": 4215.0,
+        "timestamp": "2025-10-15T20:54:36.146508",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "#XAUUSD BUY 4229\n\nTP¹    4232\nTP²    4235\nTP³    4238\nTP⁴    4241\nTP⁵    4244\nTP⁶    4247\nTP⁷    4250\nTP⁸    4253\n\nSL      4215",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4230.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4233.0,
+            4236.0,
+            4239.0,
+            4242.0,
+            4245.0,
+            4250.0
+        ],
+        "stop_loss": 4218.0,
+        "timestamp": "2025-10-15T21:03:20.975515",
+        "channel_name": "Trade with Pat 🆓 (FRN)",
+        "raw_message": "#XAUUSD   BUY  4230✅\n\nSl      4218\n\n\nTP     4233✅\nTP     4236✅\nTP     4239✅\nTP     4242✅\nTP     4245✅\nTP     4250✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "SELL",
+        "entry_price": 106800.0,
+        "entry_price_range": null,
+        "take_profits": [
+            105600.0,
+            105900.0,
+            106200.0,
+            106500.0
+        ],
+        "stop_loss": 107300.0,
+        "timestamp": "2025-10-15T21:05:57.920350",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD Sell 106800\n\nTP 1 106500\nTP 2 106200\nTP 3 105900\nTP 4 105600\n\nSL  107300",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 120.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 12.0,
+        "timestamp": "2025-10-15T21:16:19.992734",
+        "channel_name": "𝐍𝐀𝐒𝐃𝐀𝐐 𝐌𝐀𝐒𝐓𝐄𝐑 𝐅𝐗",
+        "raw_message": "Master of Gold ™👑:\nXAUUSD BUY\n\nRUNNING IN 120+ PIPS PROFIT\n\nPerformance Is Real \nWhy You Facing Loss i can Change Your Life Very Fast \nBig Client contact us for Big profit\nis  24 hour available \n\ncontect👉 @Raju_fx12",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": 2320.0,
+        "timestamp": "2025-10-15T21:24:33.759627",
+        "channel_name": "Fx & News Analysis",
+        "raw_message": "🚨GOLD H4 2320+ pip📉📈✅✅✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            30.0
+        ],
+        "stop_loss": 30.0,
+        "timestamp": "2025-10-15T21:29:21.387074",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 1 COMPLETE 30+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-15T21:29:33.142634",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 2 COMPLETE 60+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4238.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4240.0,
+            4242.0,
+            4244.0,
+            4246.0,
+            4248.0,
+            4250.0
+        ],
+        "stop_loss": 4222.0,
+        "timestamp": "2025-10-15T21:32:07.982396",
+        "channel_name": "𝐓𝐇𝐄 𝐊𝐈𝐍𝐆 𝐎𝐅 𝐆𝐎𝐋𝐃 𝐕𝐈𝐏🔥",
+        "raw_message": "😑GOLD BUY 4238_4235\n\nTP 4240\nTP 4242\nTP 4244\nTP 4246\nTP 4248\nTP 4250\n\nSL 4222",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            30.0
+        ],
+        "stop_loss": 30.0,
+        "timestamp": "2025-10-15T21:51:51.345292",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 1 DONE 30+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-15T21:52:10.255846",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 2 DONE 60+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-15T21:52:49.927020",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 3 DONE 100+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            130.0
+        ],
+        "stop_loss": 130.0,
+        "timestamp": "2025-10-15T21:53:17.059892",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 4 DONE 130+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4234.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4206.0,
+            4210.0,
+            4214.0,
+            4218.0,
+            4222.0,
+            4226.0,
+            4230.0
+        ],
+        "stop_loss": 4250.0,
+        "timestamp": "2025-10-15T22:00:43.504620",
+        "channel_name": "TRADING WITH AHMED",
+        "raw_message": "XAUUSD SELL 4234\nMORE SELL 4238\n\nTP  4230\nTP  4226\nTP  4222\nTP  4218\nTP  4214\nTP  4210\nTP  4206\n\nSL  4250",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4230.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4235.0,
+            4240.0
+        ],
+        "stop_loss": 4220.0,
+        "timestamp": "2025-10-15T22:06:57.165879",
+        "channel_name": "Gold Expert Fx",
+        "raw_message": "Xauusd Buy 4230\n\nTP 4235\nTP 4240\n\nSL 4220",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-15T22:16:19.189381",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "#XAUUSD SELL \n\n\nTP 1 𝐇𝐈𝐓 40+ PIPS  PROFIT DONE✅ ✅🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4232.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4220.0,
+            4223.0,
+            4226.0,
+            4229.0
+        ],
+        "stop_loss": 4240.0,
+        "timestamp": "2025-10-15T22:17:14.824907",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell 4232\n\nTP 4229\nTP 4226\nTP 4223\nTP 4220\n\nSL 4240",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4227.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:18:33.058412",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4227",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            150.0
+        ],
+        "stop_loss": 150.0,
+        "timestamp": "2025-10-15T22:19:11.749359",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP4 HlT 150+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4223.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:21:49.231817",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐇𝐀𝐒𝐀𝐀𝐍",
+        "raw_message": "GOLD BUY NOW 4223",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4222.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4224.0,
+            4226.0,
+            4228.0,
+            4230.0,
+            4232.0
+        ],
+        "stop_loss": 4212.0,
+        "timestamp": "2025-10-15T22:22:37.103564",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4222\nMORE BUY 4218\n\nTP 4224\nTP 4226\nTP 4228\nTP 4230\nTP 4232\n\nSL 4212",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4223.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4226.0,
+            4229.0,
+            4232.0,
+            4235.0
+        ],
+        "stop_loss": 4213.0,
+        "timestamp": "2025-10-15T22:22:48.645867",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐇𝐀𝐒𝐀𝐀𝐍",
+        "raw_message": "#XAUUSD BUY NOW 4223\n \n\nTP¹ 4226\nTP² 4229\nTP³ 4232\nTp⁴ 4235\n\nSL 4213\n\nFollow Proper Money Management!",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            200.0
+        ],
+        "stop_loss": 200.0,
+        "timestamp": "2025-10-15T22:27:12.004655",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP5 HlT 200+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            130.0
+        ],
+        "stop_loss": 130.0,
+        "timestamp": "2025-10-15T22:31:11.440126",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "#XAUUSD SELL \n\n\nTP 2 𝐇𝐈𝐓 130+ PIPS  PROFIT DONE✅ ✅🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4212.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4215.0,
+            4218.0,
+            4221.0,
+            4224.0,
+            4227.0,
+            4230.0
+        ],
+        "stop_loss": 4195.0,
+        "timestamp": "2025-10-15T22:32:52.503962",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "XAUUSD BUY 4212/ 4204\nTP 4215\nTP 4218\nTP 4221\nTP 4224\nTP 4227\nTP 4230\nSL 4195",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4210.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:33:26.815087",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐇𝐀𝐒𝐀𝐀𝐍",
+        "raw_message": "GOLD BUY NOW 4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4212.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:33:50.193182",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4212",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:34:18.118172",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 1 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4210.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4213.0,
+            4216.0,
+            4219.0,
+            4222.0,
+            4225.0
+        ],
+        "stop_loss": 4197.0,
+        "timestamp": "2025-10-15T22:34:59.851701",
+        "channel_name": "|| 𝗝𝗼𝗮𝗻 𝗨𝗦𝗔 𝗙𝗢𝗥𝗘𝗫 𝗙𝘅 ||",
+        "raw_message": "GOLD BUY 4210\n\n🟢TP 4213\n🟢TP 4216\n🟢TP 4219\n🟢TP 4222\n🟢TP 4225\n🚫SL 4197",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4210.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4215.0,
+            4220.0,
+            4225.0,
+            4230.0,
+            4235.0
+        ],
+        "stop_loss": 4200.0,
+        "timestamp": "2025-10-15T22:35:11.874405",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐇𝐀𝐒𝐀𝐀𝐍",
+        "raw_message": "#XAUUSD BUY NOW 4210\n \n\nTP¹ 4215\nTP² 4220\nTP³ 4225\nTp⁴ 4230\nTP⁵ 4235\nSL 4200\n\nFollow Proper Money Management!",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:35:34.052877",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 2 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            3.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:36:17.187452",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 3 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:36:29.142932",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 4 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            270.0
+        ],
+        "stop_loss": 270.0,
+        "timestamp": "2025-10-15T22:36:49.001174",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP6 HlT 270+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            320.0
+        ],
+        "stop_loss": 320.0,
+        "timestamp": "2025-10-15T22:37:10.706168",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL \nTP6 HlT 320+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4206.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4209.0,
+            4213.0,
+            4217.0,
+            4220.0,
+            4224.0,
+            4227.0
+        ],
+        "stop_loss": 4195.0,
+        "timestamp": "2025-10-15T22:37:32.636691",
+        "channel_name": "Trade with Pat 🆓 (FRN)",
+        "raw_message": "#XAUUSD   BUY  4206✅\n\nSl      4195\n\n\nTP     4209✅\nTP     4213✅\nTP     4217✅\nTP     4220✅\nTP     4224✅\nTP     4227✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4205.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4208.0,
+            4211.0,
+            4214.0,
+            4217.0,
+            4220.0,
+            4223.0
+        ],
+        "stop_loss": 4195.0,
+        "timestamp": "2025-10-15T22:38:07.764376",
+        "channel_name": "|| 𝗝𝗼𝗮𝗻 𝗨𝗦𝗔 𝗚𝗢𝗟𝗗 𝗙𝘅 ||",
+        "raw_message": "✅XAUUSD BUY 4205/4202\n\nTP¹   4208\nTP²   4211\nTP³   4214\nTP⁴   4217\nTP⁵   4220\nTP⁶   4223\nSL   4195",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4204.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4206.0,
+            4208.0,
+            4210.0,
+            4212.0,
+            4214.0,
+            4216.0
+        ],
+        "stop_loss": 4194.0,
+        "timestamp": "2025-10-15T22:38:27.898980",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4204\nMORE BUY 4200\n\nTP 4206\nTP 4208\nTP 4210\nTP 4212\nTP 4214\nTP 4216\n\nSL 4194",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4205.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4208.0,
+            4211.0,
+            4214.0,
+            4217.0,
+            4220.0,
+            4223.0
+        ],
+        "stop_loss": 4195.0,
+        "timestamp": "2025-10-15T22:38:49.055616",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗚𝗢𝗟𝗗 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "✅XAUUSD BUY 4205/4202\n\nTP¹   4208\nTP²   4211\nTP³   4214\nTP⁴   4217\nTP⁵   4220\nTP⁶   4223\nSL   4195",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4142.0,
+        "entry_price_range": null,
+        "take_profits": [
+            400.0
+        ],
+        "stop_loss": 400.0,
+        "timestamp": "2025-10-15T22:39:35.461488",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD SELL (4142)\nAll Target DONE 400+ PIP'S PROFIT DONE BOOM BOOM ✅💥👏👏😵‍💫😵‍💫",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4215.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4203.0,
+            4206.0,
+            4209.0,
+            4212.0
+        ],
+        "stop_loss": 4223.0,
+        "timestamp": "2025-10-15T22:40:13.353356",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell 4215\n\nTP 4212\nTP 4209\nTP 4206\nTP 4203\n\nSL 4223",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4204.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4208.0,
+            4213.0,
+            4216.0,
+            4223.0,
+            4227.0
+        ],
+        "stop_loss": 4190.0,
+        "timestamp": "2025-10-15T22:40:26.944101",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD BUY 4204\n\nTP 4208\nTP 4213\nTP 4216\nTP 4223\nTP 4227\nSL 4190",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            230.0
+        ],
+        "stop_loss": 230.0,
+        "timestamp": "2025-10-15T22:40:54.515886",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "#XAUUSD SELL \n\n\nTP 3 𝐇𝐈𝐓 230+ PIPS  PROFIT DONE✅ ✅🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            20.0
+        ],
+        "stop_loss": 20.0,
+        "timestamp": "2025-10-15T22:41:47.989394",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP1 HlT 20+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-15T22:42:04.613484",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP2 HlT 40+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-15T22:42:27.642669",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP3 HlT 60+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:49:02.130332",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 1 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:49:15.379837",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 2 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            3.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:49:38.487881",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 3 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPJPY",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:52:11.808314",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "GBPJPY Buy TP 1 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPJPY",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:52:25.787661",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "GBPJPY Buy TP 2 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "GBPJPY",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            3.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:52:59.206876",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "GBPJPY Buy TP 3 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4205.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4208.0,
+            4211.0,
+            4214.0,
+            4217.0,
+            4220.0
+        ],
+        "stop_loss": 4194.0,
+        "timestamp": "2025-10-15T22:55:13.325288",
+        "channel_name": "𝐍𝐀𝐒𝐃𝐀𝐐 𝐌𝐀𝐒𝐓𝐄𝐑 𝐅𝐗",
+        "raw_message": "GOLD BUY  4205\n\nTP 4208\nTP 4211\nTP 4214\nTP 4217\nTP 4220\n\nSL 4194",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T22:59:15.435947",
+        "channel_name": "GOLD VIP MASTER",
+        "raw_message": "XAUUSD Sell TP 4 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4208.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T23:01:21.441834",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "GOLD BUY 4208",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4208.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4210.0,
+            4213.0,
+            4216.0,
+            4219.0,
+            4222.0,
+            4225.0
+        ],
+        "stop_loss": 4195.0,
+        "timestamp": "2025-10-15T23:02:38.345603",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "😑GOLD BUY 4208/4204\n\nTP 4210\nTP 4213\nTP 4216\nTP 4219\nTP 4222\nTP 4225\n\nSL 4195",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-15T23:06:21.903321",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP1 HlT 40+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-15T23:06:37.167752",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP2 HlT 80+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-15T23:07:16.714256",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP3 HlT 100+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-15T23:08:06.131845",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP4 HlT 80+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-15T23:08:51.006135",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP5 HlT 100+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 130.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T23:09:05.679374",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nRUNNING IN 130+ PIPS AMAZING",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4215.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4219.0,
+            4224.0,
+            4229.0
+        ],
+        "stop_loss": 4205.0,
+        "timestamp": "2025-10-15T23:09:55.212152",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "GOLD XAUUSD Buy 4215/4212\n\n\nTP 4219\nTP 4224\nTP 4229\n\nSL. 4205",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-15T23:10:08.505560",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP6 HlT 120+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 120.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T23:10:32.951946",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP All HlT 120+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4220.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T23:11:25.317760",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "Gold sell now 4220👑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": null,
+        "entry_price_range": [
+            4220.0,
+            4225.0
+        ],
+        "take_profits": [
+            4200.0,
+            4202.0,
+            4204.0,
+            4206.0,
+            4208.0,
+            4210.0,
+            4212.0,
+            4214.0,
+            4216.0,
+            4218.0
+        ],
+        "stop_loss": 4230.0,
+        "timestamp": "2025-10-15T23:13:12.658346",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "⭐️GOLD SELL NOW 4220/4225\n\n📉TP 4218\n📉TP 4216\n📉TP 4214\n📉TP 4212\n📉TP 4210\n📉TP 4208\n📉TP 4206\n📉TP 4204\n📉TP 4202\n📉TP 4200🎯\n \n❌SL 4230",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            30.0
+        ],
+        "stop_loss": 30.0,
+        "timestamp": "2025-10-15T23:15:47.206753",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 1 COMPLETE 30+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-15T23:15:58.054529",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 2 COMPLETE 60+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            90.0
+        ],
+        "stop_loss": 90.0,
+        "timestamp": "2025-10-15T23:16:35.796881",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 3 COMPLETE 90+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-15T23:16:56.869356",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 4 COMPLETE 120+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            190.0
+        ],
+        "stop_loss": 190.0,
+        "timestamp": "2025-10-15T23:17:35.007202",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP4 HlT 190+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            160.0
+        ],
+        "stop_loss": 160.0,
+        "timestamp": "2025-10-15T23:17:56.549061",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET 5 COMPLETE 160+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 200.0,
+        "entry_price_range": null,
+        "take_profits": [
+            200.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-15T23:19:55.238341",
+        "channel_name": "𝗡𝗔𝗦𝗗𝗔𝗤 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "#GOLD BUY💥\n\nTARGET All COMPLETE 200+ PIPS DONE 😑😑😑",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": null,
+        "entry_price_range": [
+            4218.0,
+            4222.0
+        ],
+        "take_profits": [
+            4224.0,
+            4226.0,
+            4228.0,
+            4230.0,
+            4232.0,
+            4234.0,
+            4236.0,
+            4238.0
+        ],
+        "stop_loss": 4210.0,
+        "timestamp": "2025-10-15T23:20:52.332703",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "⭐️GOLD BUY NOW 4222/4218\n\n📈TP 4224\n📈TP 4226\n📈TP 4228\n📈TP 4230\n📈TP 4232\n📈TP 4234\n📈TP 4236\n📈TP 4238🎯\n\n❌SL 4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4204.0,
+        "entry_price_range": null,
+        "take_profits": [
+            230.0
+        ],
+        "stop_loss": 230.0,
+        "timestamp": "2025-10-15T23:23:22.989540",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY (4204)\nAll Target DONE 230+ PIP'S PROFIT DONE BOOM BOOM ✅💥👏👏😵‍💫😵‍💫",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4227.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4231.0,
+            4236.0,
+            4241.0,
+            4250.0
+        ],
+        "stop_loss": 4220.0,
+        "timestamp": "2025-10-15T23:25:55.166310",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "BUY XAUUSD GOLD 4227-4224\n\n1TP 4231\n2TP 4236\n3TP 4241\n4TP 4250\n\nSl 4220 ❌\n\n\nFollow Pepper money management",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4224.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4226.0,
+            4228.0,
+            4230.0,
+            4232.0,
+            4234.0,
+            4236.0
+        ],
+        "stop_loss": 4208.0,
+        "timestamp": "2025-10-15T23:27:23.640093",
+        "channel_name": "𝐓𝐇𝐄 𝐊𝐈𝐍𝐆 𝐎𝐅 𝐆𝐎𝐋𝐃 𝐕𝐈𝐏🔥",
+        "raw_message": "😑GOLD BUY 4224_4220\n\nTP 4226\nTP 4228\nTP 4230\nTP 4232\nTP 4234\nTP 4236\n\nSL 4208",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4226.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4208.0,
+            4212.0,
+            4216.0,
+            4220.0,
+            4224.0
+        ],
+        "stop_loss": 4238.0,
+        "timestamp": "2025-10-15T23:27:34.575818",
+        "channel_name": "TRADE WITH FARHAN",
+        "raw_message": "XAUUSD SELL 4226/ 4228\n\nTP 4224\nTP 4220\nTP 4216\nTP 4212\nTP 4208\n\nSL 4238\nFollow proper money management✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4221.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4224.0,
+            4227.0,
+            4230.0,
+            4233.0,
+            4236.0
+        ],
+        "stop_loss": 4214.0,
+        "timestamp": "2025-10-15T23:35:15.585561",
+        "channel_name": "𝐍𝐀𝐒𝐃𝐀𝐐 𝐌𝐀𝐒𝐓𝐄𝐑 𝐅𝐗",
+        "raw_message": "GOLD BUY  4221\n\nTP 4224\nTP 4227\nTP 4230\nTP 4233\nTP 4236\n\nSL 4214",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": 4.0,
+        "timestamp": "2025-10-16T00:11:06.298175",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "#GOLD BUY RUNNING IN 50+PIPS AMAZING\n\nContact me @Zardari4x✔️✔️🔼🔼",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": 4.0,
+        "timestamp": "2025-10-16T00:13:51.732675",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "#GOLD BUY RUNNING IN 70+PIPS AMAZING\n\nContact me @Zardari4x✔️✔️🔼🔼",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-16T00:15:44.219437",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "💯XAUUSD BOOM       BOOM 🔼🔼\n💯TP 1 Hit  80   pips   successful",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": 4.0,
+        "timestamp": "2025-10-16T00:19:15.162279",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "#GOLD BUY RUNNING IN 100+PIPS AMAZING\n\nContact me @Zardari4x✔️✔️🔼🔼",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 40.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T00:29:31.292307",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ¹ Achieved bye 40+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 90.0,
+        "entry_price_range": null,
+        "take_profits": [
+            90.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T00:30:03.981454",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ² Achieved bye 90+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 140.0,
+        "entry_price_range": null,
+        "take_profits": [
+            140.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T00:30:36.437997",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy \n\nTarget ³ Achieved bye 140+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 140.0,
+        "entry_price_range": null,
+        "take_profits": [
+            140.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T00:31:10.958847",
+        "channel_name": "AMAZING ATRADER",
+        "raw_message": "Gold XAUUSD Buy\n\nTarget All Achieved bye 140+ Pips✔️💸",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4235.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4238.0,
+            4241.0,
+            4244.0,
+            4247.0,
+            4250.0,
+            4253.0
+        ],
+        "stop_loss": 4220.0,
+        "timestamp": "2025-10-16T01:03:03.455463",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "XAUUSD BUY 4235/ 4230\nTP 4238\nTP 4241\nTP 4244\nTP 4247\nTP 4250\nTP 4253\nSL 4220",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4232.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4235.0,
+            4240.0,
+            4245.0,
+            4250.0
+        ],
+        "stop_loss": 4224.0,
+        "timestamp": "2025-10-16T01:09:39.957847",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑺𝑵𝑰𝑷𝑬𝑹𝑺",
+        "raw_message": "✅#XAUUSD BUY 4232/4229\n\n✅TP 4235\n✅TP 4240\n✅TP 4245\n✅TP 4250\n\n\n❌SL 4224",
+        "status": "pending"
+    },
+    {
+        "symbol": "ACCOUNT",
+        "action": "BUY",
+        "entry_price": 14370.0,
+        "entry_price_range": null,
+        "take_profits": [
+            14370.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T01:14:22.519276",
+        "channel_name": "Gold Expert Fx",
+        "raw_message": "Your account deserves professional hands 🤝  \nWhile others take random trades — we build consistent profit 📈  \n\n$14,370+ running profit 🔥  \nReal trading • Real strategy • Real growth 💰  \n\nNo fake promises, only results that speak for themselves ✅  \n✉️ DM “Manage My Account” – let’s grow your account next!",
+        "status": "pending"
+    },
+    {
+        "symbol": "ACCOUNT",
+        "action": "BUY",
+        "entry_price": 14370.0,
+        "entry_price_range": null,
+        "take_profits": [
+            14370.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T01:17:35.030041",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "Your account deserves professional hands 🤝  \nWhile others take random trades — we build consistent profit 📈  \n\n$14,370+ running profit 🔥  \nReal trading • Real strategy • Real growth 💰  \n\nNo fake promises, only results that speak for themselves ✅  \n✉️ DM “Manage My Account” – let’s grow your account next!",
+        "status": "pending"
+    },
+    {
+        "symbol": "AVAILAB",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0,
+            5.0,
+            10.0
+        ],
+        "stop_loss": 5.0,
+        "timestamp": "2025-10-16T01:47:18.150808",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "LONG TIME TRADE AVAILABLE\n\n1K,  2K, 5K,  10K \n\nCONTACT ME\n@Forex_Killer05✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4235.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0,
+            4225.0,
+            4230.0,
+            4244.0
+        ],
+        "stop_loss": 4244.0,
+        "timestamp": "2025-10-16T02:03:07.959590",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "XAUUSD SELL NOW @ 4235.00\n\n       Tp1: 4230.00\n       Tp2: 4225.00\n       Tp3: 4220.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4244.00",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0,
+            50.0
+        ],
+        "stop_loss": 50.0,
+        "timestamp": "2025-10-16T02:16:39.090694",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_SELL🔽🔽\n\n🔽🔽TP1 HIT🔽🔽\n\n50 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4225.5,
+        "entry_price_range": null,
+        "take_profits": [
+            4227.5,
+            4229.0,
+            4231.0,
+            4233.0,
+            4245.0
+        ],
+        "stop_loss": 4218.0,
+        "timestamp": "2025-10-16T02:29:10.402830",
+        "channel_name": "Trade with Pat 🆓 (FRN)",
+        "raw_message": "Gold buy  4225.5-2422\n\nSL: 4218\n\nTP: 4227.5\nTP: 4229\nTP: 4231\nTP: 4233\n\nTP:open(4245",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0,
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-16T02:29:46.148623",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_SELL🔽🔽\n\n🔽🔽TP2 HIT🔽🔽\n\n100 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": null,
+        "entry_price_range": [
+            4218.0,
+            4222.0
+        ],
+        "take_profits": [
+            4224.0,
+            4226.0,
+            4228.0,
+            4230.0,
+            4232.0,
+            4234.0,
+            4236.0,
+            4238.0
+        ],
+        "stop_loss": 4210.0,
+        "timestamp": "2025-10-16T02:31:49.195880",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "⭐️GOLD BUY NOW 4222/4218\n\n📈TP 4224\n📈TP 4226\n📈TP 4228\n📈TP 4230\n📈TP 4232\n📈TP 4234\n📈TP 4236\n📈TP 4238🎯\n\n❌SL 4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4225.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T02:38:07.846717",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "Gold buy 4225",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4224.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4227.0,
+            4228.0,
+            4233.0,
+            4236.0,
+            4239.0
+        ],
+        "stop_loss": 4210.0,
+        "timestamp": "2025-10-16T02:39:40.130419",
+        "channel_name": "|| 𝗝𝗼𝗮𝗻 𝗨𝗦𝗔 𝗙𝗢𝗥𝗘𝗫 𝗙𝘅 ||",
+        "raw_message": "✅XAUUSD BUY 4224\n\nTP¹   4227\nTP²   4228\nTP³   4233\nTP⁴   4236\nTP⁵   4239\n\n SL   4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4224.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4227.0,
+            4228.0,
+            4233.0,
+            4236.0,
+            4239.0
+        ],
+        "stop_loss": 4210.0,
+        "timestamp": "2025-10-16T02:41:19.891612",
+        "channel_name": "|| 𝗝𝗼𝗮𝗻 𝗨𝗦𝗔 𝗙𝗢𝗥𝗘𝗫 𝗙𝘅 ||",
+        "raw_message": "✅XAUUSD BUY 4224\n\nTP¹   4227\nTP²   4228\nTP³   4233\nTP⁴   4236\nTP⁵   4239\n\n SL   4210",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T02:58:58.639708",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑺𝑵𝑰𝑷𝑬𝑹𝑺",
+        "raw_message": "XAUUSD Buy \nNZDUSD buy\nGBPUSD sell\nGPBJAY sell\nEURUSD buy\nBTCUSD buy\nVIP GROUP OPEN for 3 minutes 👇😺👐",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            160.0
+        ],
+        "stop_loss": 160.0,
+        "timestamp": "2025-10-16T03:01:42.316513",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 4 DONE 160+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4240.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4228.0,
+            4231.0,
+            4234.0,
+            4237.0
+        ],
+        "stop_loss": 4253.0,
+        "timestamp": "2025-10-16T03:10:42.762207",
+        "channel_name": "TRADE WITH HASAAN",
+        "raw_message": "#XAUUSD #GOLD SELL 4240-4243\n\nTP 4237\nTP 4234\nTP 4231\nTP 4228\n\nSL 4253\n\n\nFollow Proper Money Management! ✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 200.0,
+        "entry_price_range": null,
+        "take_profits": [
+            5.0,
+            200.0
+        ],
+        "stop_loss": 3.0,
+        "timestamp": "2025-10-16T03:25:51.677696",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "#GOLD sell now \nBIG SIGNAL \nTARGET 200 PIPS \nSL\nTP 👇👇\nAlso vip room lifetime 0$ 👇\n\nhttps://t.me/+Tn6Nehfrccg5NWFk\n\n FAST OPEN FOR 3 MINUTES 👆",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 109000.0,
+        "entry_price_range": null,
+        "take_profits": [
+            109300.0,
+            109600.0,
+            109900.0,
+            110200.0
+        ],
+        "stop_loss": 109400.0,
+        "timestamp": "2025-10-16T03:50:59.524625",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD BUY  109000\nTP1 109300\nTP2 109600\nTP3 109900\nTP4 110200\nSL    109400",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T03:51:12.811730",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD BUY TP 1 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0,
+            2.0
+        ],
+        "stop_loss": 2.0,
+        "timestamp": "2025-10-16T04:21:47.436523",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "GOLD SELL NOW \nUSE BIG LOT \nSL & TP 👇👇\nhttps://t.me/+R_DjEm4nTCMyY2Nk\nhttps://t.me/+R_DjEm4nTCMyY2Nk",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": null,
+        "entry_price_range": [
+            4238.0,
+            4242.0
+        ],
+        "take_profits": [
+            4244.0,
+            4246.0,
+            4248.0,
+            4250.0,
+            4252.0,
+            4254.0,
+            4256.0
+        ],
+        "stop_loss": 4230.0,
+        "timestamp": "2025-10-16T04:25:56.243368",
+        "channel_name": "𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐒𝐔𝐑𝐄𝐒𝐇",
+        "raw_message": "⭐️GOLD BUY NOW 4242/4238\n\n📈TP 4244\n📈TP 4246\n📈TP 4248\n📈TP 4250\n📈TP 4252\n📈TP 4254\n📈TP 4256🎯\n\n❌SL 4230",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 100.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T04:26:44.689753",
+        "channel_name": "𝙒𝙊𝙍𝙇𝘿 𝙁𝙊𝙍𝙀𝙓 𝙎𝙄𝙉𝙂𝘼𝙇𝙎",
+        "raw_message": "#XAUUSD BUY\nTP³ HIT100+PIPS PROFIT DONE BOOM",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4242.75,
+        "entry_price_range": null,
+        "take_profits": [
+            4244.25,
+            4245.75,
+            4247.75
+        ],
+        "stop_loss": 4237.75,
+        "timestamp": "2025-10-16T04:58:26.858551",
+        "channel_name": "Trade with Pat 🆓 (FRN)",
+        "raw_message": "BUY GOLD @ 4242.75 \n \n 👑 TP1: 4244.25 \n 👑 TP2: 4245.75 \n 👑 TP3: 4247.75 \n \n 🛑 SL : 4237.75 \n\n Manage your risk at all times!!",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4243.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4226.0,
+            4230.0,
+            4234.0,
+            4236.0,
+            4240.0
+        ],
+        "stop_loss": 4257.0,
+        "timestamp": "2025-10-16T05:21:53.921226",
+        "channel_name": "TRADE WITH FARHAN",
+        "raw_message": "XAUUSD SELL 4243/ 4245\n\nTP 4240\nTP 4236\nTP 4234\nTP 4230\nTP 4226\n\nSL 4257\nFollow proper money management✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            130.0
+        ],
+        "stop_loss": 130.0,
+        "timestamp": "2025-10-16T05:23:32.404370",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "💯XAUUSD BOOM       BOOM 🔼🔼\n💯TP 2 Hit  130   pips   successful",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            180.0
+        ],
+        "stop_loss": 180.0,
+        "timestamp": "2025-10-16T05:24:23.214102",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "💯XAUUSD BOOM       BOOM 🔼🔼\n💯TP 3 Hit  180   pips   successful",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2667.0,
+            2667.0,
+            2667.0
+        ],
+        "stop_loss": 2667.0,
+        "timestamp": "2025-10-16T05:26:51.875890",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗚𝗢𝗟𝗗 𝗠𝗔𝗦𝗧𝗘𝗥",
+        "raw_message": "XAUUSD BUY\nNZDUSD sell\nGBPUSD sell\nGPBJAY sell\nEURUSD sell\nUSDJPY sell\nGROUP OPEN for 2 minutes 👇\n\nhttps://t.me/GOLDBULLTRADE2667\nhttps://t.me/GOLDBULLTRADE2667\nhttps://t.me/GOLDBULLTRADE2667",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2667.0,
+            2667.0,
+            2667.0
+        ],
+        "stop_loss": 2667.0,
+        "timestamp": "2025-10-16T05:27:35.725503",
+        "channel_name": "|| 𝗝𝗼𝗮𝗻 𝗨𝗦𝗔 𝗙𝗢𝗥𝗘𝗫 𝗙𝘅 ||",
+        "raw_message": "XAUUSD BUY\nNZDUSD sell\nGBPUSD sell\nGPBJAY sell\nEURUSD sell\nUSDJPY sell\nGROUP OPEN for 2 minutes 👇\n\nhttps://t.me/GOLDBULLTRADE2667\nhttps://t.me/GOLDBULLTRADE2667\nhttps://t.me/GOLDBULLTRADE2667",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "SELL",
+        "entry_price": 111.0,
+        "entry_price_range": null,
+        "take_profits": [
+            0.0,
+            300.0,
+            400.0,
+            700.0
+        ],
+        "stop_loss": 200.0,
+        "timestamp": "2025-10-16T05:34:17.728652",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD SELL 111 600.00\nTP1  111 300.00\nTP2  111 000.00\nTP3  110 700.00\nTP4. 110 400.00\nSL     112 200.00",
+        "status": "pending"
+    },
+    {
+        "symbol": "BTCUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T05:35:39.779053",
+        "channel_name": "FOREX VIP GOLD SIGNALS",
+        "raw_message": "BTCUSD SELL TP 1 HIT",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4240.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4228.0,
+            4231.0,
+            4234.0,
+            4237.0
+        ],
+        "stop_loss": 4253.0,
+        "timestamp": "2025-10-16T05:40:25.294587",
+        "channel_name": "TRADE WITH HASAAN",
+        "raw_message": "#XAUUSD #GOLD SELL 4240-4243\n\nTP 4237\nTP 4234\nTP 4231\nTP 4228\n\nSL 4253\n\n\nFollow Proper Money Management! ✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4234.0,
+        "entry_price_range": null,
+        "take_profits": [],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T05:45:29.648228",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4234",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4232.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4234.0,
+            4236.0,
+            4238.0,
+            4240.0,
+            4242.0,
+            4244.0
+        ],
+        "stop_loss": 4222.0,
+        "timestamp": "2025-10-16T05:48:02.602649",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4232\nMORE BUY 4230\n\nTP 4234\nTP 4236\nTP 4238\nTP 4240\nTP 4242\nTP 4244\n\nSL 4222",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4232.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4234.0,
+            4236.0,
+            4238.0,
+            4240.0,
+            4242.0,
+            4244.0
+        ],
+        "stop_loss": 4222.0,
+        "timestamp": "2025-10-16T05:48:17.597465",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "GOLD BUY 4232\nMORE BUY 4230\n\nTP 4234\nTP 4236\nTP 4238\nTP 4240\nTP 4242\nTP 4244\n\nSL 4222",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            20.0
+        ],
+        "stop_loss": 20.0,
+        "timestamp": "2025-10-16T05:57:22.088747",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP1 HlT 20+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-16T05:57:38.367973",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP2 HlT 40+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4239.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4224.0,
+            4228.0,
+            4232.0,
+            4236.0
+        ],
+        "stop_loss": 4250.0,
+        "timestamp": "2025-10-16T05:58:42.517386",
+        "channel_name": "𝙂𝙤𝙡𝙙 𝙋𝙧𝙤 𝙎𝙞𝙜𝙣𝙖𝙡",
+        "raw_message": "XAUUSD Sell  4239/40\n\nTP.   4236\nTP.   4232\nTP.   4228\nTP.   4224\n\nSL.  4250\n\nUse small Lots is Life Of Capital",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4245.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4220.0,
+            4225.0,
+            4230.0,
+            4233.0,
+            4237.0,
+            4241.0
+        ],
+        "stop_loss": 4253.0,
+        "timestamp": "2025-10-16T06:07:07.810312",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑺𝑵𝑰𝑷𝑬𝑹𝑺",
+        "raw_message": "✅#XAUUSD SELL 4245/4248\n\n✅TP 4241\n✅TP 4237\n✅TP 4233\n✅TP 4230\n✅TP 4225\n✅TP 4220\n\n\n\n❌SL 4253",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            60.0
+        ],
+        "stop_loss": 60.0,
+        "timestamp": "2025-10-16T06:09:36.567866",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP1 HlT 60+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-16T06:10:03.572361",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP4 HlT 80+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-16T06:10:48.547994",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP5 HlT 100+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-16T06:11:24.833271",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTP6 HlT 120+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 120.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T06:12:10.372096",
+        "channel_name": "𝙓𝘼𝙐𝙐𝙎𝘿 𝙈𝘼𝙎𝙏𝙀𝙍 𝙕𝙊𝙉𝙀",
+        "raw_message": "📊XAUUSD BUY \n\nTPAll HlT 120+ PlPS PROFlT DONE✔️✔️✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4252.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4224.0,
+            4228.0,
+            4232.0,
+            4236.0,
+            4240.0,
+            4244.0,
+            4248.0
+        ],
+        "stop_loss": 4270.0,
+        "timestamp": "2025-10-16T06:23:59.442526",
+        "channel_name": "TRADING WITH AHMED",
+        "raw_message": "XAUUSD SELL 4252\nMORE SELL 4256\n\nTP  4248\nTP  4244\nTP  4240\nTP  4236\nTP  4232\nTP  4228\nTP  4224\n\nSL  4270",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4255.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0,
+            4235.0,
+            4239.0,
+            4243.0,
+            4247.0,
+            4251.0,
+            4264.0
+        ],
+        "stop_loss": 4264.0,
+        "timestamp": "2025-10-16T06:26:39.518903",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "XAUUSD BUY NOW @ 4255.00\n\n       Tp1: 4251.00\n       Tp2: 4247.00\n       Tp3: 4243.00\n       Tp4: 4239.00\n       Tp5: 4235.00\n       Tp6: 4230.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4264.00",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4255.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4240.0,
+            4245.0,
+            4251.0
+        ],
+        "stop_loss": 4265.0,
+        "timestamp": "2025-10-16T06:37:49.889390",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "🔵XAUUSD_GOLD SELL 4255\n\n\n🔳TP : 4251.00\n🔳TP : 4245.00\n🔳TP : 4240.00\n\n❌SL : 4265.000",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 5.0,
+        "entry_price_range": null,
+        "take_profits": [
+            160.0
+        ],
+        "stop_loss": 160.0,
+        "timestamp": "2025-10-16T06:48:47.247109",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 5 DONE 160+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 6.0,
+        "entry_price_range": null,
+        "take_profits": [
+            200.0
+        ],
+        "stop_loss": 200.0,
+        "timestamp": "2025-10-16T06:49:03.736979",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 6 DONE 200+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 7.0,
+        "entry_price_range": null,
+        "take_profits": [
+            230.0
+        ],
+        "stop_loss": 230.0,
+        "timestamp": "2025-10-16T06:49:36.914219",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 7 DONE 230+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 8.0,
+        "entry_price_range": null,
+        "take_profits": [
+            260.0
+        ],
+        "stop_loss": 260.0,
+        "timestamp": "2025-10-16T06:50:10.726048",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP 8 DONE 260+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 300.0,
+        "entry_price_range": null,
+        "take_profits": [
+            300.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T06:50:50.386213",
+        "channel_name": "XAUUSD PRO TRADER™",
+        "raw_message": "XAUUSD BUY💥\n\nTP All DONE 300+ PIPS SUCCESSFULLY 💯✌️✌️💪💪 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4245.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4250.0,
+            4255.0
+        ],
+        "stop_loss": 4235.0,
+        "timestamp": "2025-10-16T07:00:30.567825",
+        "channel_name": "Gold Expert Fx",
+        "raw_message": "Xauusd Buy 4245\n\nTP 4250\nTP 4255\n\nSL 4235",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 8559.0,
+        "entry_price_range": null,
+        "take_profits": [
+            8559.0
+        ],
+        "stop_loss": null,
+        "timestamp": "2025-10-16T07:16:37.788787",
+        "channel_name": "Gold Expert Fx",
+        "raw_message": "$8,559+ running profit on Gold 💵  \nThis is what happens when professionals manage your account 📈  \n\nNo luck. No guessing.  \nJust pure strategy, consistency & risk control 🔥  \n\nYour account could be next.  \n✉️ DM “Manage My Account” and start earning safely.",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4265.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4250.0,
+            4253.0,
+            4256.0,
+            4259.0,
+            4262.0
+        ],
+        "stop_loss": 4280.0,
+        "timestamp": "2025-10-16T07:17:18.719906",
+        "channel_name": "XAUUSD GOLD MASTER",
+        "raw_message": "XAUUSD SELL 4265_4270\n\nTP¹.  4262\nTP².  4259\nTP³.  4256\nTP⁴.  4253\nTP⁵.  4250\n\n\nSL.   4280\n\nUse Money Management",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            40.0
+        ],
+        "stop_loss": 40.0,
+        "timestamp": "2025-10-16T07:19:56.664073",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "#XAUUSD SELL \n\n\nTP 1 𝐇𝐈𝐓 40+ PIPS  PROFIT DONE✅ ✅🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-16T07:20:12.248267",
+        "channel_name": "𝙂𝙊𝙇𝘿 𝙎𝘾𝘼𝙇𝙋𝙄𝙉𝙂 𝙏𝙍𝘼𝘿𝙀𝙍",
+        "raw_message": "#XAUUSD SELL \n\n\nTP 2 𝐇𝐈𝐓 100+ PIPS  PROFIT DONE✅ ✅🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4268.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4252.0,
+            4256.0,
+            4260.0,
+            4264.0
+        ],
+        "stop_loss": 4282.0,
+        "timestamp": "2025-10-16T07:40:05.265058",
+        "channel_name": "𝙂𝙤𝙡𝙙 𝙋𝙧𝙤 𝙎𝙞𝙜𝙣𝙖𝙡",
+        "raw_message": "XAUUSD Sell  4268/70\n\nTP.   4264\nTP.   4260\nTP.   4256\nTP.   4252\n\nSL.  4282\n\nUse small Lots is Life Of Capital",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            270.0
+        ],
+        "stop_loss": 270.0,
+        "timestamp": "2025-10-16T07:43:54.277708",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "💯XAUUSD BOOM       BOOM 🔼🔼\n💯TP 4 Hit  270   pips   successful",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0
+        ],
+        "stop_loss": 1.0,
+        "timestamp": "2025-10-16T07:45:08.390621",
+        "channel_name": "𝗫𝗔𝗨𝗨𝗦𝗗 𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗭𝗢𝗡𝗘",
+        "raw_message": "GOLD BUY NOW \nUSE BIG LOT 😍\nSL & TP 👇👇\n\nhttps://t.me/+2-nKFk__DgdlNjlk\n\n1 year free join ☝️✅",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4.0
+        ],
+        "stop_loss": 4.0,
+        "timestamp": "2025-10-16T08:16:03.904237",
+        "channel_name": "𝑮𝑶𝑳𝑫 𝑮𝑩𝑷 𝑺𝑰𝑮𝑵𝑨𝑳𝑺",
+        "raw_message": "👉🗽Hello My Best friends A Lot Of Friends Don't know about Exness Broker if you are also Don't know so Start Create your New Trading Account under this link and Be the Part of winners #Deposit your #Exness account or if you don't have #Exnsss Trading account \nSo create your account under our Recommended broker and start Trading #Gold Selling Signals we provide this Signal will help you to  millionaires \nMore information about @Zardari4x\nhttps://one.exnesstrack.org/a/puaxrsw4ui/?puaxrsw4ui",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 4289.7,
+        "entry_price_range": null,
+        "take_profits": [
+            100.0,
+            4280.0,
+            4285.0,
+            4299.0
+        ],
+        "stop_loss": 4299.0,
+        "timestamp": "2025-10-16T09:24:58.455834",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "XAUUSD SELL NOW @ 4289.70\n\n       Tp1: 4285.00\n       Tp2: 4280.00\n       Tp3: 4275.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4299.00",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4288.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4292.0,
+            4296.0,
+            4300.0,
+            4304.0,
+            4308.0,
+            4312.0,
+            4316.0
+        ],
+        "stop_loss": 4260.0,
+        "timestamp": "2025-10-16T09:30:55.950713",
+        "channel_name": "TRADING WITH AHMED",
+        "raw_message": "XAUUSD BUY 4288\nMORE BUY  4244\n\nTP  4292\nTP  4296\nTP  4300\nTP  4304\nTP  4308\nTP  4312\nTP  4316\n\nSL  4260",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4288.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4293.0,
+            4297.0,
+            4300.0,
+            4303.0
+        ],
+        "stop_loss": 4276.0,
+        "timestamp": "2025-10-16T09:31:24.528278",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD BUY 4288\n\nTP 4293\nTP 4297\nTP 4300\nTP 4303\nSL 4276",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4271.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4274.0,
+            4278.0,
+            4283.0,
+            4286.0
+        ],
+        "stop_loss": 4260.0,
+        "timestamp": "2025-10-16T09:36:50.567610",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD BUY 4271\n\nTP 4274\nTP 4278\nTP 4283\nTP 4286\nSL 4260",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            1.0,
+            50.0
+        ],
+        "stop_loss": 50.0,
+        "timestamp": "2025-10-16T09:37:38.180498",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_SELL🔽🔽\n\n🔽🔽TP1 HIT🔽🔽\n\n50 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            2.0,
+            100.0
+        ],
+        "stop_loss": 100.0,
+        "timestamp": "2025-10-16T09:37:55.394263",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_SELL🔽🔽\n\n🔽🔽TP2 HIT🔽🔽\n\n100 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4261.0,
+        "entry_price_range": null,
+        "take_profits": [
+            4264.0,
+            4269.0,
+            4273.0,
+            4276.0
+        ],
+        "stop_loss": 4252.0,
+        "timestamp": "2025-10-16T09:42:56.134683",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "XAUUSD BUY 4261\n\nTP 4264\nTP 4269\nTP 4273\nTP 4276\nSL 4252",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 1.0,
+        "entry_price_range": null,
+        "take_profits": [
+            30.0
+        ],
+        "stop_loss": 30.0,
+        "timestamp": "2025-10-16T09:47:35.911879",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP1 HlT 30+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 2.0,
+        "entry_price_range": null,
+        "take_profits": [
+            80.0
+        ],
+        "stop_loss": 80.0,
+        "timestamp": "2025-10-16T09:49:08.319317",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP2 HlT 80+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            120.0
+        ],
+        "stop_loss": 120.0,
+        "timestamp": "2025-10-16T09:49:54.912825",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP3 HlT 120+ PIP'S PROFIT DONE ✔️💥",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "BUY",
+        "entry_price": 4.0,
+        "entry_price_range": null,
+        "take_profits": [
+            190.0
+        ],
+        "stop_loss": 190.0,
+        "timestamp": "2025-10-16T09:50:51.577976",
+        "channel_name": "VIP GOLD SIGNALS️",
+        "raw_message": "#XAUUSD BUY \nTP4 HlT 190+ PIP'S PROFIT DONE ✔️",
+        "status": "pending"
+    },
+    {
+        "symbol": "XAUUSD",
+        "action": "SELL",
+        "entry_price": 3.0,
+        "entry_price_range": null,
+        "take_profits": [
+            3.0,
+            200.0
+        ],
+        "stop_loss": 200.0,
+        "timestamp": "2025-10-16T09:52:06.809393",
+        "channel_name": "Xauusd Gold_Vip",
+        "raw_message": "(#XAUUSD_SELL🔽🔽\n\n🔽🔽TP3 HIT🔽🔽\n\n200 PIP'S PROFITS DONE 🔥🔥",
+        "status": "pending"
+    }
+]

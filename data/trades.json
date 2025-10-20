@@ -1,0 +1,448 @@
+{
+    "active_positions": {
+        "5120284368": {
+            "ticket": 5120284368,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4289.7,
+                "entry_price_range": null,
+                "take_profits": [
+                    100.0,
+                    4280.0,
+                    4285.0,
+                    4299.0
+                ],
+                "stop_loss": 4299.0,
+                "timestamp": "2025-10-16T09:24:58.455834",
+                "channel_name": "Xauusd Gold_Vip",
+                "raw_message": "XAUUSD SELL NOW @ 4289.70\n\n       Tp1: 4285.00\n       Tp2: 4280.00\n       Tp3: 4275.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4299.00",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T09:25:13.101238",
+            "entry_price": 4286.47,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "open"
+        }
+    },
+    "trade_history": [
+        {
+            "ticket": 5105776983,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4218.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4222.0,
+                    4226.0,
+                    4230.0,
+                    4233.0
+                ],
+                "stop_loss": 4205.0,
+                "timestamp": "2025-10-15T18:23:22.219246",
+                "channel_name": "AMAZING ATRADER",
+                "raw_message": "GOLD XAUUSD Buy 4218/4215\n\n\nTP 4222\nTP 4226\nTP 4230\nTP 4233\n\nSL. 4205",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T18:23:23.793459",
+            "entry_price": 4221.26,
+            "lot_size": 0.01,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T18:25:31.076342"
+        },
+        {
+            "ticket": 5105805549,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4224.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4205.0,
+                    4211.0,
+                    4216.0,
+                    4220.0
+                ],
+                "stop_loss": 4239.0,
+                "timestamp": "2025-10-15T18:27:05.534202",
+                "channel_name": "VIP GOLD SIGNALS️",
+                "raw_message": "XAUUSD SELL 4224\n\nTP 4220\nTP 4216\nTP 4211\nTP 4205\nSL 4239",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T18:27:07.005699",
+            "entry_price": 4221.94,
+            "lot_size": 0.01,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T19:57:29.404737"
+        },
+        {
+            "ticket": 5106950563,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4235.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4238.0,
+                    4241.0,
+                    4244.0,
+                    4247.0
+                ],
+                "stop_loss": 4226.0,
+                "timestamp": "2025-10-15T20:29:17.271925",
+                "channel_name": "GOLD VIP MASTER",
+                "raw_message": "XAUUSD Buy 4235\n\nTP 4238\nTP 4241\nTP 4244\nTP 4247\n\nSL 4226",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T20:29:24.732901",
+            "entry_price": 4236.43,
+            "lot_size": 0.01,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T21:21:23.638228"
+        },
+        {
+            "ticket": 5106953155,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4238.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4226.0,
+                    4229.0,
+                    4232.0,
+                    4235.0
+                ],
+                "stop_loss": 4251.0,
+                "timestamp": "2025-10-15T20:29:41.743527",
+                "channel_name": "TRADE WITH HASAAN",
+                "raw_message": "#XAUUSD #GOLD SELL 4238-4241\n\nTP 4235\nTP 4232\nTP 4229\nTP 4226\n\nSL 4251\n\n\nFollow Proper Money Management! ✔️",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T20:29:49.609812",
+            "entry_price": 4235.97,
+            "lot_size": 0.01,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T22:14:40.770522"
+        },
+        {
+            "ticket": 5107848596,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4230.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4235.0,
+                    4240.0
+                ],
+                "stop_loss": 4220.0,
+                "timestamp": "2025-10-15T22:06:57.165879",
+                "channel_name": "Gold Expert Fx",
+                "raw_message": "Xauusd Buy 4230\n\nTP 4235\nTP 4240\n\nSL 4220",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T22:07:10.309815",
+            "entry_price": 4230.67,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T22:30:42.000638"
+        },
+        {
+            "ticket": 5107975479,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4232.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4220.0,
+                    4223.0,
+                    4226.0,
+                    4229.0
+                ],
+                "stop_loss": 4240.0,
+                "timestamp": "2025-10-15T22:17:14.824907",
+                "channel_name": "GOLD VIP MASTER",
+                "raw_message": "XAUUSD Sell 4232\n\nTP 4229\nTP 4226\nTP 4223\nTP 4220\n\nSL 4240",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T22:17:27.849809",
+            "entry_price": 4228.04,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T22:30:42.005002"
+        },
+        {
+            "ticket": 5106797044,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4242.4245,
+                "entry_price_range": null,
+                "take_profits": [
+                    4210.0,
+                    4223.0,
+                    4227.0,
+                    4230.0,
+                    4233.0,
+                    4237.0
+                ],
+                "stop_loss": 4254.0,
+                "timestamp": "2025-10-15T20:13:38.150256",
+                "channel_name": "VIP GOLD SIGNALS️",
+                "raw_message": "XAUUSD SELL 4242.4245\nSL 4254\nTP 4237\nTP 4233\nTP 4230\nTP 4227\nTP 4223\nTP 4210",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T20:13:44.626900",
+            "entry_price": 4236.74,
+            "lot_size": 0.01,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T22:33:08.160279"
+        },
+        {
+            "ticket": 5108813141,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4215.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4219.0,
+                    4224.0,
+                    4229.0
+                ],
+                "stop_loss": 4205.0,
+                "timestamp": "2025-10-15T23:09:55.212152",
+                "channel_name": "AMAZING ATRADER",
+                "raw_message": "GOLD XAUUSD Buy 4215/4212\n\n\nTP 4219\nTP 4224\nTP 4229\n\nSL. 4205",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T23:10:08.396146",
+            "entry_price": 4217.81,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T23:11:42.639575"
+        },
+        {
+            "ticket": 5108359329,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4215.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4203.0,
+                    4206.0,
+                    4209.0,
+                    4212.0
+                ],
+                "stop_loss": 4223.0,
+                "timestamp": "2025-10-15T22:40:13.353356",
+                "channel_name": "GOLD VIP MASTER",
+                "raw_message": "XAUUSD Sell 4215\n\nTP 4212\nTP 4209\nTP 4206\nTP 4203\n\nSL 4223",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T22:40:26.907201",
+            "entry_price": 4211.96,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-15T23:13:32.884520"
+        },
+        {
+            "ticket": 5109086994,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4226.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4208.0,
+                    4212.0,
+                    4216.0,
+                    4220.0,
+                    4224.0
+                ],
+                "stop_loss": 4238.0,
+                "timestamp": "2025-10-15T23:27:34.575818",
+                "channel_name": "TRADE WITH FARHAN",
+                "raw_message": "XAUUSD SELL 4226/ 4228\n\nTP 4224\nTP 4220\nTP 4216\nTP 4212\nTP 4208\n\nSL 4238\nFollow proper money management✅",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-15T23:27:36.463379",
+            "entry_price": 4224.25,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T02:57:33.056263"
+        },
+        {
+            "ticket": 5111138293,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4235.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    100.0,
+                    4225.0,
+                    4230.0,
+                    4244.0
+                ],
+                "stop_loss": 4244.0,
+                "timestamp": "2025-10-16T02:03:07.959590",
+                "channel_name": "Xauusd Gold_Vip",
+                "raw_message": "XAUUSD SELL NOW @ 4235.00\n\n       Tp1: 4230.00\n       Tp2: 4225.00\n       Tp3: 4220.00 100% Sure Signal \n \n   ❌ SL. TP ::: 4244.00",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T02:03:22.192942",
+            "entry_price": 4234.98,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T03:57:11.389096"
+        },
+        {
+            "ticket": 5112221491,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4240.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4228.0,
+                    4231.0,
+                    4234.0,
+                    4237.0
+                ],
+                "stop_loss": 4253.0,
+                "timestamp": "2025-10-16T03:10:42.762207",
+                "channel_name": "TRADE WITH HASAAN",
+                "raw_message": "#XAUUSD #GOLD SELL 4240-4243\n\nTP 4237\nTP 4234\nTP 4231\nTP 4228\n\nSL 4253\n\n\nFollow Proper Money Management! ✔️",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T03:10:55.240894",
+            "entry_price": 4238.13,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T06:24:02.542079"
+        },
+        {
+            "ticket": 5114805922,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4240.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4228.0,
+                    4231.0,
+                    4234.0,
+                    4237.0
+                ],
+                "stop_loss": 4253.0,
+                "timestamp": "2025-10-16T05:40:25.294587",
+                "channel_name": "TRADE WITH HASAAN",
+                "raw_message": "#XAUUSD #GOLD SELL 4240-4243\n\nTP 4237\nTP 4234\nTP 4231\nTP 4228\n\nSL 4253\n\n\nFollow Proper Money Management! ✔️",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T05:40:41.019653",
+            "entry_price": 4232.46,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T06:24:02.550500"
+        },
+        {
+            "ticket": 5114305192,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "SELL",
+                "entry_price": 4243.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4226.0,
+                    4230.0,
+                    4234.0,
+                    4236.0,
+                    4240.0
+                ],
+                "stop_loss": 4257.0,
+                "timestamp": "2025-10-16T05:21:53.921226",
+                "channel_name": "TRADE WITH FARHAN",
+                "raw_message": "XAUUSD SELL 4243/ 4245\n\nTP 4240\nTP 4236\nTP 4234\nTP 4230\nTP 4226\n\nSL 4257\nFollow proper money management✅",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T05:22:07.316675",
+            "entry_price": 4241.06,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T06:41:59.999575"
+        },
+        {
+            "ticket": 5120597687,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4288.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4293.0,
+                    4297.0,
+                    4300.0,
+                    4303.0
+                ],
+                "stop_loss": 4276.0,
+                "timestamp": "2025-10-16T09:31:24.528278",
+                "channel_name": "VIP GOLD SIGNALS️",
+                "raw_message": "XAUUSD BUY 4288\n\nTP 4293\nTP 4297\nTP 4300\nTP 4303\nSL 4276",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T09:32:04.891141",
+            "entry_price": 4289.46,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T09:35:18.782237"
+        },
+        {
+            "ticket": 5120788755,
+            "signal": {
+                "symbol": "XAUUSD",
+                "action": "BUY",
+                "entry_price": 4271.0,
+                "entry_price_range": null,
+                "take_profits": [
+                    4274.0,
+                    4278.0,
+                    4283.0,
+                    4286.0
+                ],
+                "stop_loss": 4260.0,
+                "timestamp": "2025-10-16T09:36:50.567610",
+                "channel_name": "VIP GOLD SIGNALS️",
+                "raw_message": "XAUUSD BUY 4271\n\nTP 4274\nTP 4278\nTP 4283\nTP 4286\nSL 4260",
+                "status": "pending"
+            },
+            "opened_at": "2025-10-16T09:37:06.227798",
+            "entry_price": 4273.94,
+            "lot_size": 0.1,
+            "current_tp_index": 0,
+            "status": "closed",
+            "closed_at": "2025-10-16T09:37:12.922820"
+        }
+    ]
+}

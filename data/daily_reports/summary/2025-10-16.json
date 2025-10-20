@@ -1,0 +1,38 @@
+{
+    "date": "2025-10-16",
+    "generated_at": "2025-10-16T21:00:49.505154",
+    "signals": {
+        "total": 1,
+        "by_channel": {
+            "Test Channel": {
+                "count": 1,
+                "symbols": {
+                    "XAUUSD": 1
+                }
+            }
+        }
+    },
+    "trades": {
+        "total": 1,
+        "winning": 1,
+        "losing": 0,
+        "win_rate": 100.0
+    },
+    "profit_loss": {
+        "total_profit": 25.5,
+        "total_loss": 0.0,
+        "net_profit": 25.5
+    },
+    "performance_by_channel": {
+        "Test Channel": {
+            "signals": 1,
+            "trades": 1,
+            "winning": 1,
+            "losing": 0,
+            "win_rate": 100.0,
+            "profit": 25.5,
+            "loss": 0.0,
+            "net_profit": 25.5
+        }
+    }
+}
