@@ -208,6 +208,7 @@ class TelegramMT5GUI:
         self.tab_signals = self.tabview.add("الإشارات")
         self.tab_positions = self.tabview.add("الصفقات المفتوحة")
         self.tab_patterns = self.tabview.add("أنماط الرسائل")
+        self.tab_symbols = self.tabview.add("📊 خصائص الرموز")
 
         # بناء محتوى كل تبويب
         self.build_dashboard_tab()
@@ -217,6 +218,7 @@ class TelegramMT5GUI:
         self.build_signals_tab()
         self.build_positions_tab()
         self.build_patterns_tab()
+        self.build_symbols_tab()
 
         # قائمة الرسائل الحية
         self.live_messages = []
@@ -681,6 +683,22 @@ class TelegramMT5GUI:
             actions_frame, text="تصدير الإشارات (JSON)",
             command=self.export_signals_json, width=200
         ).pack(side="left", padx=10)
+
+        # زر إعادة محاولة الصفقات المعلقة
+        self.retry_pending_btn = ctk.CTkButton(
+            actions_frame, text="🔄 إعادة محاولة الصفقات المعلقة",
+            command=self.retry_pending_trades, width=250,
+            fg_color="#FFA726", hover_color="#FB8C00"
+        )
+        self.retry_pending_btn.pack(side="left", padx=10)
+        
+        # عداد الصفقات المعلقة
+        self.pending_count_label = ctk.CTkLabel(
+            actions_frame, text="معلق: 0", 
+            font=("Arial", 12, "bold"),
+            text_color="#FFA726"
+        )
+        self.pending_count_label.pack(side="left", padx=10)
 
         ctk.CTkButton(
             actions_frame, text="تحديث",
@@ -1305,7 +1323,7 @@ class TelegramMT5GUI:
         self.root.after(0, self.refresh_signals)
 
     async def _execute_trade_with_retry(self, signal: Signal, signal_dict: dict, retry_count: int = 0):
-        """تنفيذ الصفقة مع نظام إعادة المحاولة"""
+        """تنفيذ الصفقة مع نظام إعادة المحاولة الذكي"""
         from datetime import datetime
 
         try:
@@ -1315,7 +1333,7 @@ class TelegramMT5GUI:
             result = self.mt5_manager.execute_signal(signal, lot_size)
 
             if result['success']:
-                # عرض الاسم الفعلي إذا كان مختلفاً
+                # ===== نجح التنفيذ =====
                 actual_symbol = result.get('actual_symbol', signal.symbol)
                 symbol_display = f"{signal.symbol} ({actual_symbol})" if actual_symbol != signal.symbol else signal.symbol
 
@@ -1325,7 +1343,7 @@ class TelegramMT5GUI:
                 trade_data = {
                     'ticket': result.get('ticket'),
                     'signal': signal_dict,
-                    'actual_symbol': actual_symbol,  # حفظ الاسم الفعلي
+                    'actual_symbol': actual_symbol,
                     'entry_price': result.get('price'),
                     'lot_size': lot_size,
                     'opened_at': datetime.now().isoformat(),
@@ -1333,47 +1351,129 @@ class TelegramMT5GUI:
                 }
                 self.report_manager.save_trade(trade_data)
 
-                # إزالة من قائمة الانتظار إذا كانت موجودة
+                # إزالة من قائمة الانتظار
                 self.pending_trades = [t for t in self.pending_trades if t['signal'].symbol != signal.symbol]
 
-                # إظهار إشعار للمستخدم
+                # إظهار إشعار نجاح
                 success_msg = f"✅ تم فتح صفقة {signal.action} على {symbol_display}"
                 self.root.after(0, lambda msg=success_msg: self.show_toast(msg, "success", 4000))
             else:
-                # فشل التنفيذ - إضافة لقائمة الانتظار
+                # ===== فشل التنفيذ - معالجة ذكية =====
                 error_msg = result.get('error', 'خطأ غير معروف')
+                error_code = result.get('error_code', 0)
+                
                 print(f"❌ فشل تنفيذ الصفقة (محاولة {retry_count + 1}/{self.max_retry_attempts}): {error_msg}")
 
+                # ===== معالجة حالات خاصة =====
+                # حالة 1: التداول التلقائي معطل (10027)
+                if error_code == 10027:
+                    print("⚠️ السبب: التداول التلقائي معطل في MT5")
+                    
+                    # إضافة للقائمة المعلقة بحالة خاصة
+                    pending_trade = {
+                        'signal': signal,
+                        'signal_dict': signal_dict,
+                        'lot_size': lot_size,
+                        'retry_count': 0,  # إعادة تعيين العداد
+                        'last_error': error_msg,
+                        'error_code': error_code,
+                        'timestamp': datetime.now(),
+                        'status': 'awaiting_autotrading',
+                        'requires_manual_fix': True
+                    }
+                    
+                    # إضافة فقط إذا لم تكن موجودة
+                    if not any(t['signal'].symbol == signal.symbol for t in self.pending_trades):
+                        self.pending_trades.append(pending_trade)
+                    
+                    # إشعار خاص
+                    self.root.after(0, lambda: self.show_toast(
+                        f"⚠️ صفقة {signal.symbol} في الانتظار - يجب تفعيل التداول التلقائي",
+                        "warning", 6000
+                    ))
+                    
+                    # لا نعيد المحاولة تلقائياً - ننتظر التفعيل اليدوي
+                    return
+                
+                # حالة 2: لا توجد أموال كافية (10019)
+                elif error_code == 10019:
+                    print("⚠️ السبب: لا توجد أموال كافية")
+                    self.root.after(0, lambda: self.show_toast(
+                        f"❌ صفقة {signal.symbol}: رصيد غير كافٍ",
+                        "error", 5000
+                    ))
+                    # لا نعيد المحاولة - مشكلة دائمة
+                    return
+                
+                # حالة 3: السوق مغلق (10018)
+                elif error_code == 10018:
+                    print("⚠️ السبب: السوق مغلق")
+                    # يمكن إعادة المحاولة لاحقاً
+                    if retry_count < self.max_retry_attempts:
+                        pending_trade = {
+                            'signal': signal,
+                            'signal_dict': signal_dict,
+                            'lot_size': lot_size,
+                            'retry_count': retry_count + 1,
+                            'last_error': error_msg,
+                            'error_code': error_code,
+                            'timestamp': datetime.now(),
+                            'status': 'market_closed'
+                        }
+                        
+                        if not any(t['signal'].symbol == signal.symbol for t in self.pending_trades):
+                            self.pending_trades.append(pending_trade)
+                        
+                        self.root.after(0, lambda: self.show_toast(
+                            f"⏰ صفقة {signal.symbol}: السوق مغلق - سنحاول لاحقاً",
+                            "info", 4000
+                        ))
+                        
+                        # إعادة المحاولة بعد 60 ثانية
+                        await asyncio.sleep(60)
+                        await self._execute_trade_with_retry(signal, signal_dict, retry_count + 1)
+                    return
+                
+                # ===== حالات عامة - إعادة محاولة عادية =====
                 if retry_count < self.max_retry_attempts:
-                    # إضافة للقائمة المعلقة لإعادة المحاولة
+                    # إضافة للقائمة المعلقة
                     pending_trade = {
                         'signal': signal,
                         'signal_dict': signal_dict,
                         'lot_size': lot_size,
                         'retry_count': retry_count + 1,
                         'last_error': error_msg,
+                        'error_code': error_code,
                         'timestamp': datetime.now(),
-                        'status': 'pending'
+                        'status': 'retrying'
                     }
-                    self.pending_trades.append(pending_trade)
+                    
+                    # تحديث أو إضافة
+                    existing_idx = next((i for i, t in enumerate(self.pending_trades) 
+                                       if t['signal'].symbol == signal.symbol), None)
+                    if existing_idx is not None:
+                        self.pending_trades[existing_idx] = pending_trade
+                    else:
+                        self.pending_trades.append(pending_trade)
 
                     self.root.after(0, lambda: self.show_toast(
-                        f"⏳ صفقة {signal.symbol} في قائمة الانتظار (محاولة {retry_count + 1}/{self.max_retry_attempts})",
+                        f"⏳ صفقة {signal.symbol} - محاولة {retry_count + 1}/{self.max_retry_attempts}",
                         "warning", 3000
                     ))
 
-                    # جدولة إعادة المحاولة بعد 10 ثوان
+                    # إعادة المحاولة بعد 10 ثوان
                     await asyncio.sleep(10)
                     await self._execute_trade_with_retry(signal, signal_dict, retry_count + 1)
                 else:
-                    # فشل نهائي بعد جميع المحاولات
+                    # ===== فشل نهائي =====
                     self.root.after(0, lambda: self.show_toast(
                         f"❌ فشل تنفيذ صفقة {signal.symbol} بعد {self.max_retry_attempts} محاولات",
                         "error", 5000
                     ))
 
                     # إزالة من قائمة الانتظار
-                    self.pending_trades = [t for t in self.pending_trades if t['signal'].symbol != signal.symbol]
+                    self.pending_trades = [t for t in self.pending_trades 
+                                          if t['signal'].symbol != signal.symbol]
 
         except Exception as e:
             error_msg = f"خطأ في تنفيذ الصفقة: {str(e)}"
@@ -1501,15 +1601,140 @@ class TelegramMT5GUI:
             messagebox.showinfo("نجح", f"تم تعطيل {active_count} قناة ⏸️")
 
     def refresh_signals(self):
-        """تحديث قائمة الإشارات"""
+        """تحديث قائمة الإشارات والصفقات المعلقة"""
         # مسح القائمة الحالية
         for widget in self.signals_scroll.winfo_children():
             widget.destroy()
 
         self.load_signals()
 
+        # عرض الصفقات المعلقة أولاً
+        if self.pending_trades:
+            pending_header = ctk.CTkFrame(self.signals_scroll, fg_color="#2d1f1f", corner_radius=10)
+            pending_header.pack(fill="x", padx=10, pady=(10, 5))
+            
+            ctk.CTkLabel(
+                pending_header,
+                text=f"⏳ صفقات معلقة ({len(self.pending_trades)})",
+                font=("Arial", 16, "bold"),
+                text_color="#FFA726"
+            ).pack(pady=10)
+            
+            for pending in self.pending_trades:
+                self.create_pending_trade_card(pending)
+        
+        # عرض الإشارات العادية
         for signal_data in reversed(self.received_signals[-20:]):  # آخر 20 إشارة
             self.create_signal_card(signal_data)
+        
+        # تحديث العداد
+        if hasattr(self, 'pending_count_label'):
+            self.pending_count_label.configure(text=f"معلق: {len(self.pending_trades)}")
+    
+    def create_pending_trade_card(self, pending: dict):
+        """إنشاء بطاقة صفقة معلقة"""
+        signal = pending['signal']
+        
+        card = ctk.CTkFrame(self.signals_scroll, fg_color="#3d2424", corner_radius=8, border_width=2, border_color="#FFA726")
+        card.pack(fill="x", padx=10, pady=5)
+
+        # الرأس
+        header = ctk.CTkFrame(card, fg_color="transparent")
+        header.pack(fill="x", padx=15, pady=(15, 10))
+
+        symbol_label = ctk.CTkLabel(
+            header, text=f"⏳ {signal.symbol} - {signal.action}",
+            font=("Arial", 14, "bold"),
+            text_color="#FFA726"
+        )
+        symbol_label.pack(side="left")
+
+        # الحالة
+        status_text = {
+            'awaiting_autotrading': '🔴 ينتظر تفعيل التداول التلقائي',
+            'market_closed': '🕐 السوق مغلق',
+            'retrying': f'🔄 إعادة محاولة ({pending["retry_count"]}/{self.max_retry_attempts})',
+            'pending': '⏳ في الانتظار'
+        }.get(pending.get('status'), '⏳ في الانتظار')
+        
+        status_label = ctk.CTkLabel(
+            header, text=status_text,
+            font=("Arial", 11),
+            text_color="#FFA726"
+        )
+        status_label.pack(side="right")
+
+        # التفاصيل
+        details = ctk.CTkFrame(card, fg_color="transparent")
+        details.pack(fill="x", padx=15, pady=5)
+
+        ctk.CTkLabel(
+            details, text=f"❌ آخر خطأ: {pending['last_error']}",
+            font=("Arial", 10),
+            text_color="#FF5252"
+        ).pack(anchor="w")
+        
+        from datetime import datetime
+        timestamp = pending.get('timestamp')
+        if isinstance(timestamp, datetime):
+            time_str = timestamp.strftime('%H:%M:%S')
+            ctk.CTkLabel(
+                details, text=f"🕐 الوقت: {time_str}",
+                font=("Arial", 10),
+                text_color="gray"
+            ).pack(anchor="w")
+
+        # أزرار الإجراءات
+        if pending.get('requires_manual_fix'):
+            actions = ctk.CTkFrame(card, fg_color="transparent")
+            actions.pack(fill="x", padx=15, pady=(5, 15))
+            
+            ctk.CTkLabel(
+                actions,
+                text="⚠️ يتطلب تفعيل التداول التلقائي يدوياً من MT5",
+                font=("Arial", 10, "italic"),
+                text_color="#FFA726"
+            ).pack(anchor="w")
+    
+    def retry_pending_trades(self):
+        """إعادة محاولة جميع الصفقات المعلقة"""
+        if not self.pending_trades:
+            self.show_toast("لا توجد صفقات معلقة", "info", 2000)
+            return
+        
+        count = len(self.pending_trades)
+        
+        if not messagebox.askyesno(
+            "تأكيد",
+            f"هل تريد إعادة محاولة {count} صفقة معلقة؟"
+        ):
+            return
+        
+        async def retry_all():
+            retried = 0
+            for pending in list(self.pending_trades):  # نسخة لتجنب التعديل أثناء التكرار
+                try:
+                    signal = pending['signal']
+                    signal_dict = pending['signal_dict']
+                    
+                    # إعادة تعيين العداد
+                    await self._execute_trade_with_retry(signal, signal_dict, 0)
+                    retried += 1
+                    
+                    # انتظار قصير بين الصفقات
+                    await asyncio.sleep(2)
+                except Exception as e:
+                    print(f"خطأ في إعادة محاولة الصفقة: {e}")
+            
+            self.root.after(0, lambda: self.show_toast(
+                f"تمت إعادة محاولة {retried} صفقة",
+                "success", 3000
+            ))
+            
+            # تحديث العرض
+            self.root.after(0, self.refresh_signals)
+        
+        asyncio.run_coroutine_threadsafe(retry_all(), self.loop)
 
     def create_signal_card(self, signal_data: dict):
         """إنشاء بطاقة إشارة"""
@@ -1520,8 +1745,21 @@ class TelegramMT5GUI:
         header = ctk.CTkFrame(card)
         header.pack(fill="x", padx=10, pady=5)
 
+        # عرض نوع الأمر (MARKET أو PENDING)
+        order_type = signal_data.get('order_type', 'MARKET')
+        order_emoji = "⚡" if order_type == "MARKET" else "⏰"
+        
+        # ترجمة نوع الأمر
+        order_type_ar = {
+            'MARKET': 'فوري',
+            'BUY_LIMIT': 'شراء معلق (Limit)',
+            'SELL_LIMIT': 'بيع معلق (Limit)',
+            'BUY_STOP': 'شراء معلق (Stop)',
+            'SELL_STOP': 'بيع معلق (Stop)'
+        }.get(order_type, order_type)
+        
         symbol_label = ctk.CTkLabel(
-            header, text=f"{signal_data['symbol']} - {signal_data['action']}",
+            header, text=f"{order_emoji} {signal_data['symbol']} - {signal_data['action']} ({order_type_ar})",
             font=("Arial", 14, "bold")
         )
         symbol_label.pack(side="left")
@@ -2513,6 +2751,269 @@ class TelegramMT5GUI:
         # بدء الجدولة (سيتم التنفيذ أول مرة بعد 24 ساعة)
         # يمكن تغييرها لتنفيذ فوري: self.root.after(1000, generate_and_schedule)
         self.root.after(24 * 60 * 60 * 1000, generate_and_schedule)
+
+    def build_symbols_tab(self):
+        """بناء تبويب خصائص الرموز"""
+        # الإطار الرئيسي
+        main_frame = ctk.CTkFrame(self.tab_symbols)
+        main_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        # العنوان
+        title_frame = ctk.CTkFrame(main_frame)
+        title_frame.pack(fill="x", padx=10, pady=10)
+        
+        ctk.CTkLabel(
+            title_frame,
+            text="📊 فحص خصائص الرموز في MT5",
+            font=("Arial", 18, "bold")
+        ).pack(pady=10)
+
+        # إطار الإدخال
+        input_frame = ctk.CTkFrame(main_frame)
+        input_frame.pack(fill="x", padx=10, pady=10)
+
+        ctk.CTkLabel(
+            input_frame,
+            text="أدخل رمز الأصل (مثل: XAUUSD, EURUSD):",
+            font=("Arial", 12)
+        ).pack(pady=5)
+
+        symbol_input_frame = ctk.CTkFrame(input_frame)
+        symbol_input_frame.pack(pady=5)
+
+        self.symbol_entry = ctk.CTkEntry(
+            symbol_input_frame,
+            placeholder_text="XAUUSD",
+            width=200,
+            font=("Arial", 14)
+        )
+        self.symbol_entry.pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            symbol_input_frame,
+            text="🔍 فحص الرمز",
+            command=self.check_symbol_properties,
+            font=("Arial", 12, "bold"),
+            fg_color="#2196F3",
+            hover_color="#1976D2"
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            symbol_input_frame,
+            text="💾 حفظ",
+            command=self.save_current_symbol_properties,
+            font=("Arial", 12, "bold"),
+            fg_color="#4CAF50",
+            hover_color="#45a049"
+        ).pack(side="left", padx=5)
+
+        # أزرار إضافية
+        action_frame = ctk.CTkFrame(input_frame)
+        action_frame.pack(pady=10)
+
+        ctk.CTkButton(
+            action_frame,
+            text="📋 فحص جميع الرموز",
+            command=self.check_all_symbols,
+            font=("Arial", 12),
+            width=180
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            action_frame,
+            text="📂 فتح ملف الخصائص",
+            command=self.open_symbols_file,
+            font=("Arial", 12),
+            width=180
+        ).pack(side="left", padx=5)
+
+        # إطار النتائج
+        results_frame = ctk.CTkFrame(main_frame)
+        results_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        ctk.CTkLabel(
+            results_frame,
+            text="النتائج:",
+            font=("Arial", 14, "bold")
+        ).pack(anchor="w", padx=10, pady=5)
+
+        # منطقة عرض النتائج مع scroll
+        self.symbols_results_text = ctk.CTkTextbox(
+            results_frame,
+            font=("Courier New", 11),
+            wrap="word"
+        )
+        self.symbols_results_text.pack(fill="both", expand=True, padx=10, pady=10)
+
+        # متغير لتخزين آخر نتيجة
+        self.last_symbol_properties = None
+
+    def check_symbol_properties(self):
+        """فحص خصائص الرمز المدخل"""
+        if not self.mt5_manager or not self.mt5_manager.is_connected:
+            self.show_toast("يجب الاتصال بـ MT5 أولاً", "warning")
+            return
+
+        symbol = self.symbol_entry.get().strip().upper()
+        if not symbol:
+            self.show_toast("الرجاء إدخال رمز الأصل", "warning")
+            return
+
+        # مسح النتائج السابقة
+        self.symbols_results_text.delete("1.0", "end")
+        self.symbols_results_text.insert("1.0", "⏳ جاري فحص الرمز...\n")
+        self.root.update()
+
+        # الحصول على الخصائص
+        properties = self.mt5_manager.get_symbol_properties(symbol, verbose=False)
+        
+        if not properties:
+            self.symbols_results_text.delete("1.0", "end")
+            self.symbols_results_text.insert("1.0", f"❌ فشل الحصول على خصائص الرمز {symbol}\n")
+            self.symbols_results_text.insert("end", "تأكد من:\n")
+            self.symbols_results_text.insert("end", "  1. الرمز موجود في المنصة\n")
+            self.symbols_results_text.insert("end", "  2. الاتصال بـ MT5 نشط\n")
+            self.show_toast(f"لم يتم العثور على الرمز {symbol}", "error")
+            return
+
+        # حفظ النتيجة
+        self.last_symbol_properties = properties
+
+        # عرض النتائج
+        self.symbols_results_text.delete("1.0", "end")
+        
+        output = []
+        output.append("=" * 70)
+        output.append(f"📊 تقرير خصائص الرمز: {properties['symbol']}")
+        output.append("=" * 70)
+        
+        if properties['description']:
+            output.append(f"📝 الوصف: {properties['description']}")
+        
+        output.append(f"\n🔧 إعدادات التداول:")
+        output.append(f"   ✅ التداول مسموح: {'نعم ✓' if properties['trade_allowed'] else '❌ لا'}")
+        output.append(f"   🤖 التداول عبر الخبراء: {'نعم ✓' if properties['trade_expert'] else '❌ لا'}")
+        output.append(f"   👁️ الرمز مرئي: {'نعم ✓' if properties['visible'] else '❌ لا'}")
+        
+        output.append(f"\n📏 أحجام الصفقات:")
+        output.append(f"   الحد الأدنى: {properties['volume_min']} لوت")
+        output.append(f"   الحد الأقصى: {properties['volume_max']} لوت")
+        output.append(f"   خطوة الحجم: {properties['volume_step']} لوت")
+        
+        output.append(f"\n💰 معلومات السعر:")
+        output.append(f"   عدد الأرقام العشرية: {properties['digits']}")
+        output.append(f"   حجم النقطة (Point): {properties['point']}")
+        output.append(f"   حجم الـ Tick: {properties['tick_size']}")
+        output.append(f"   قيمة الـ Tick: {properties['tick_value']}")
+        output.append(f"   حجم العقد: {properties['contract_size']}")
+        
+        output.append(f"\n📊 معلومات السوق:")
+        output.append(f"   Spread الحالي: {properties['spread']} نقطة")
+        output.append(f"   Stop Level: {properties['trade_stops_level']} نقطة")
+        
+        output.append(f"\n💵 العملات:")
+        output.append(f"   عملة الأساس: {properties['currency_base']}")
+        output.append(f"   عملة الربح: {properties['currency_profit']}")
+        output.append(f"   عملة الهامش: {properties['currency_margin']}")
+        
+        if properties['margin_initial'] > 0:
+            output.append(f"\n💳 الهامش:")
+            output.append(f"   الهامش الأولي: {properties['margin_initial']}")
+            output.append(f"   هامش الصيانة: {properties['margin_maintenance']}")
+        
+        # معلومات أنواع التعبئة
+        filling_modes = []
+        if properties['filling_mode'] & 1:
+            filling_modes.append("FOK")
+        if properties['filling_mode'] & 2:
+            filling_modes.append("IOC")
+        if properties['filling_mode'] & 4:
+            filling_modes.append("RETURN")
+        
+        output.append(f"\n⚙️ أوضاع التعبئة المدعومة:")
+        output.append(f"   {', '.join(filling_modes) if filling_modes else 'غير محدد'}")
+        
+        output.append(f"\n⏰ وقت الفحص:")
+        output.append(f"   {properties['timestamp']}")
+        
+        output.append("=" * 70)
+        
+        self.symbols_results_text.insert("1.0", "\n".join(output))
+        self.show_toast(f"تم فحص الرمز {symbol} بنجاح", "success")
+
+    def save_current_symbol_properties(self):
+        """حفظ خصائص الرمز الحالي"""
+        if not self.last_symbol_properties:
+            self.show_toast("لا توجد بيانات للحفظ، افحص رمز أولاً", "warning")
+            return
+
+        symbol = self.last_symbol_properties['symbol']
+        success = self.mt5_manager.save_symbol_properties(symbol)
+        
+        if success:
+            self.show_toast(f"تم حفظ خصائص {symbol}", "success")
+        else:
+            self.show_toast("فشل حفظ الخصائص", "error")
+
+    def check_all_symbols(self):
+        """فحص جميع الرموز المتاحة"""
+        if not self.mt5_manager or not self.mt5_manager.is_connected:
+            self.show_toast("يجب الاتصال بـ MT5 أولاً", "warning")
+            return
+
+        # تأكيد
+        import tkinter.messagebox as messagebox
+        confirm = messagebox.askyesno(
+            "تأكيد",
+            "هل تريد فحص جميع الرموز؟\nقد يستغرق هذا عدة دقائق."
+        )
+        
+        if not confirm:
+            return
+
+        self.symbols_results_text.delete("1.0", "end")
+        self.symbols_results_text.insert("1.0", "⏳ جاري فحص جميع الرموز...\n")
+        self.symbols_results_text.insert("end", "هذا قد يستغرق بعض الوقت...\n")
+        self.root.update()
+
+        # الحصول على جميع الخصائص
+        results = self.mt5_manager.get_all_symbols_properties(save_to_file=True)
+        
+        if results:
+            self.symbols_results_text.delete("1.0", "end")
+            output = f"✅ تم فحص {len(results)} رمز بنجاح!\n\n"
+            output += f"📂 تم حفظ البيانات في: data/symbols_info.json\n\n"
+            output += "الرموز المفحوصة:\n"
+            for symbol in list(results.keys())[:50]:  # أول 50 رمز
+                output += f"  • {symbol}\n"
+            
+            if len(results) > 50:
+                output += f"\n... و {len(results) - 50} رمز آخر\n"
+            
+            self.symbols_results_text.insert("1.0", output)
+            self.show_toast(f"تم فحص {len(results)} رمز", "success")
+        else:
+            self.symbols_results_text.delete("1.0", "end")
+            self.symbols_results_text.insert("1.0", "❌ فشل فحص الرموز\n")
+            self.show_toast("فشل فحص الرموز", "error")
+
+    def open_symbols_file(self):
+        """فتح ملف الخصائص"""
+        import os
+        import subprocess
+        
+        file_path = 'data/symbols_info.json'
+        
+        if not os.path.exists(file_path):
+            self.show_toast("الملف غير موجود، افحص رمز أولاً", "warning")
+            return
+        
+        try:
+            # فتح الملف بالبرنامج الافتراضي
+            os.startfile(file_path)
+            self.show_toast("تم فتح الملف", "success")
+        except Exception as e:
+            self.show_toast(f"فشل فتح الملف: {str(e)}", "error")
 
 
 if __name__ == "__main__":

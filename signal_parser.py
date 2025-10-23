@@ -15,6 +15,7 @@ class Signal:
     channel_name: str = None
     raw_message: str = None
     status: str = "pending"  # pending, executed, failed
+    order_type: str = "MARKET"  # MARKET, BUY_LIMIT, SELL_LIMIT, BUY_STOP, SELL_STOP
 
     def __post_init__(self):
         if self.take_profits is None:
@@ -92,17 +93,34 @@ class SignalParser:
 
         return None
 
-    def extract_action(self, text: str) -> Optional[str]:
-        """استخراج نوع الصفقة (شراء/بيع)"""
+    def extract_action(self, text: str) -> Tuple[Optional[str], str]:
+        """استخراج نوع الصفقة ونوع الأمر (شراء/بيع + فوري/معلق)
+        
+        Returns:
+            Tuple[Optional[str], str]: (action, order_type)
+            - action: 'BUY' أو 'SELL'
+            - order_type: 'MARKET', 'BUY_LIMIT', 'SELL_LIMIT', 'BUY_STOP', 'SELL_STOP'
+        """
         text_upper = text.upper()
 
-        # أنماط الشراء
+        # أنماط الأوامر المعلقة (مرتبة حسب الأولوية - الأطول أولاً)
+        # استخدام أنماط محددة جداً لتجنب التطابق مع SL/TP
+        if re.search(r'\bBUY\s+LIMIT\b', text_upper):
+            return 'BUY', 'BUY_LIMIT'
+        elif re.search(r'\bSELL\s+LIMIT\b', text_upper):
+            return 'SELL', 'SELL_LIMIT'
+        elif re.search(r'\bBUY\s+STOP\b', text_upper):
+            return 'BUY', 'BUY_STOP'
+        elif re.search(r'\bSELL\s+STOP\b', text_upper):
+            return 'SELL', 'SELL_STOP'
+
+        # أنماط الشراء الفوري
         buy_patterns = [
             r'\bBUY\b', r'\bLONG\b', r'\bCALL\b', r'\bBUYING\b',
             r'🟢', r'⬆️', r'📈', r'🔼'
         ]
 
-        # أنماط البيع
+        # أنماط البيع الفوري
         sell_patterns = [
             r'\bSELL\b', r'\bSHORT\b', r'\bPUT\b', r'\bSELLING\b',
             r'🔴', r'⬇️', r'📉', r'🔽'
@@ -110,13 +128,13 @@ class SignalParser:
 
         for pattern in buy_patterns:
             if re.search(pattern, text_upper) or pattern in text:
-                return 'BUY'
+                return 'BUY', 'MARKET'
 
         for pattern in sell_patterns:
             if re.search(pattern, text_upper) or pattern in text:
-                return 'SELL'
+                return 'SELL', 'MARKET'
 
-        return None
+        return None, 'MARKET'
 
     def extract_numbers(self, text: str) -> List[float]:
         """استخراج جميع الأرقام من النص"""
@@ -297,14 +315,14 @@ class SignalParser:
         return None
 
     def parse(self, message_text: str, channel_name: str = None) -> Optional[Signal]:
-        """تحليل رسالة التليجرام واستخراج الإشارة"""
+        """تحليل رسالة التليجرام واستخراج الإشارة - محسّن"""
         try:
             # استخراج المكونات الأساسية
             symbol = self.extract_symbol(message_text)
             if not symbol:
                 return None  # يجب أن يكون هناك رمز على الأقل
 
-            action = self.extract_action(message_text)
+            action, order_type = self.extract_action(message_text)
             if not action:
                 return None  # يجب أن يكون هناك نوع صفقة
 
@@ -322,6 +340,37 @@ class SignalParser:
             if not (entry_price or entry_range):
                 return None
 
+            # تحديد سعر المرجع
+            reference_price = entry_price if entry_price else sum(entry_range) / 2
+            
+            # تصفية TPs لإزالة TPs غير المنطقية
+            if action == 'BUY':
+                # في BUY: نبقي TPs >= Entry فقط
+                filtered_tps = [tp for tp in take_profits if tp >= reference_price]
+                # إذا كان أول TP يساوي Entry، نحتفظ به كنقطة تأكيد
+                if filtered_tps and filtered_tps[0] == reference_price:
+                    # نبحث عن TPs أعلى
+                    higher_tps = [tp for tp in take_profits if tp > reference_price]
+                    if higher_tps:
+                        # نستخدم TPs الأعلى فقط
+                        filtered_tps = sorted(higher_tps)
+                take_profits = filtered_tps
+            else:  # SELL
+                # في SELL: نبقي TPs <= Entry فقط
+                filtered_tps = [tp for tp in take_profits if tp <= reference_price]
+                if filtered_tps and filtered_tps[0] == reference_price:
+                    # نبحث عن TPs أقل
+                    lower_tps = [tp for tp in take_profits if tp < reference_price]
+                    if lower_tps:
+                        # نستخدم TPs الأقل فقط
+                        filtered_tps = sorted(lower_tps, reverse=True)
+                take_profits = filtered_tps
+            
+            # التأكد من وجود TPs بعد التصفية
+            if not take_profits:
+                print(f"⚠️ لا توجد TPs صالحة بعد التصفية للإشارة {symbol} {action}")
+                return None
+
             # التحقق الصارم من صحة البيانات
             if not self.validate_signal_data(symbol, action, entry_price, entry_range,
                                             take_profits, stop_loss):
@@ -336,7 +385,8 @@ class SignalParser:
                 take_profits=take_profits,
                 stop_loss=stop_loss,
                 channel_name=channel_name,
-                raw_message=message_text
+                raw_message=message_text,
+                order_type=order_type  # إضافة نوع الأمر
             )
 
             return signal
@@ -350,7 +400,7 @@ class SignalParser:
     def validate_signal_data(self, symbol: str, action: str, entry_price: Optional[float],
                            entry_range: Optional[Tuple[float, float]],
                            take_profits: List[float], stop_loss: float) -> bool:
-        """التحقق من صحة بيانات الإشارة"""
+        """التحقق من صحة بيانات الإشارة - محسّن"""
 
         # يجب أن يكون هناك سعر دخول أو نطاق دخول
         if not entry_price and not entry_range:
@@ -368,16 +418,30 @@ class SignalParser:
         reference_price = entry_price if entry_price else sum(entry_range) / 2
 
         if action == 'BUY':
-            # في الشراء: TP يجب أن يكون أعلى من سعر الدخول، SL أقل
-            if not all(tp > reference_price for tp in take_profits):
-                return False
+            # في الشراء: TP يجب أن يكون أعلى من أو يساوي سعر الدخول، SL أقل
+            # نسمح بـ TP = Entry (بعض الإشارات تستخدم Entry كأول TP)
+            if not all(tp >= reference_price for tp in take_profits):
+                print(f"⚠️ تحذير: بعض TPs أقل من سعر الدخول في صفقة BUY")
+                # نقوم بتصفية TPs الصحيحة فقط
+                valid_tps = [tp for tp in take_profits if tp >= reference_price]
+                if not valid_tps:
+                    return False
+            
             if stop_loss >= reference_price:
+                print(f"⚠️ SL ({stop_loss}) يجب أن يكون أقل من Entry ({reference_price}) في BUY")
                 return False
+                
         else:  # SELL
-            # في البيع: TP يجب أن يكون أقل من سعر الدخول، SL أعلى
-            if not all(tp < reference_price for tp in take_profits):
-                return False
+            # في البيع: TP يجب أن يكون أقل من أو يساوي سعر الدخول، SL أعلى
+            if not all(tp <= reference_price for tp in take_profits):
+                print(f"⚠️ تحذير: بعض TPs أعلى من سعر الدخول في صفقة SELL")
+                # نقوم بتصفية TPs الصحيحة فقط
+                valid_tps = [tp for tp in take_profits if tp <= reference_price]
+                if not valid_tps:
+                    return False
+            
             if stop_loss <= reference_price:
+                print(f"⚠️ SL ({stop_loss}) يجب أن يكون أعلى من Entry ({reference_price}) في SELL")
                 return False
 
         return True

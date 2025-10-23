@@ -29,6 +29,9 @@ class MT5Manager:
 
         # ذاكرة تخزين مؤقت لأسماء الرموز (لتسريع البحث)
         self.symbol_cache = {}
+        
+        # ملف حفظ خصائص الرموز
+        self.symbols_info_file = 'data/symbols_info.json'
 
     def connect(self, login: int, password: str, server: str) -> bool:
         """الاتصال بـ MT5"""
@@ -92,6 +95,80 @@ class MT5Manager:
         mt5.shutdown()
         self.is_connected = False
         print("⚠️ تم قطع الاتصال بـ MT5")
+
+    def _enable_auto_trading(self) -> bool:
+        """محاولة تفعيل التداول التلقائي بذكاء"""
+        try:
+            # للأسف، MT5 API لا يسمح بتفعيل التداول التلقائي برمجياً
+            # ولكن يمكننا إعطاء تعليمات واضحة للمستخدم
+            print("━" * 60)
+            print("📢 تنبيه: التداول التلقائي معطل في MT5!")
+            print("━" * 60)
+            print("⚙️ لتفعيل التداول التلقائي، اتبع الخطوات التالية:")
+            print("   1. افتح MT5 Terminal")
+            print("   2. اذهب إلى: Tools → Options")
+            print("   3. اختر تبويب Expert Advisors")
+            print("   4. فعّل ✓ Allow automated trading")
+            print("   5. فعّل ✓ Allow DLL imports (اختياري)")
+            print("   6. اضغط OK")
+            print("   7. تأكد من ظهور زر 'AutoTrading' أخضر في أعلى MT5")
+            print("━" * 60)
+            print("⏳ انتظر 10 ثوان للتفعيل...")
+            print()
+            
+            # انتظار 10 ثوان للمستخدم
+            for i in range(10, 0, -1):
+                print(f"⏱️  {i} ثانية متبقية...", end='\r')
+                time.sleep(1)
+            print()
+            
+            # إعادة فحص
+            terminal_info = mt5.terminal_info()
+            if terminal_info and terminal_info.trade_allowed:
+                print("✅ تم تفعيل التداول التلقائي بنجاح!")
+                return True
+            else:
+                print("⚠️ التداول التلقائي لا يزال معطلاً")
+                print("💡 يرجى التفعيل يدوياً ثم الضغط على 'إعادة المحاولة' في الواجهة")
+                return False
+                
+        except Exception as e:
+            print(f"❌ خطأ في فحص التداول التلقائي: {e}")
+            return False
+
+    def _get_error_message(self, error_code: int, original_message: str) -> str:
+        """الحصول على رسالة خطأ واضحة بالعربية"""
+        error_messages = {
+            10004: "❌ خطأ في الخادم - يرجى المحاولة لاحقاً",
+            10006: "❌ طلب مرفوض - تحقق من الاتصال",
+            10007: "❌ طلب ملغى من قبل المتداول",
+            10008: "❌ طلب موضوع بالفعل",
+            10009: "❌ طلب معالج بالفعل",
+            10010: "❌ طلب معالج جزئياً فقط",
+            10011: "❌ خطأ في معالجة الطلب",
+            10012: "❌ طلب ملغى بسبب timeout",
+            10013: "❌ طلب غير صالح",
+            10014: "❌ حجم تداول غير صالح",
+            10015: "❌ سعر غير صالح",
+            10016: "❌ stop levels غير صالح",
+            10017: "❌ التداول معطل",
+            10018: "❌ السوق مغلق",
+            10019: "❌ لا توجد أموال كافية",
+            10020: "❌ الأسعار تغيرت",
+            10021: "❌ لا توجد أسعار",
+            10022: "❌ طلب غير صالح",
+            10023: "❌ الحجم غير صالح",
+            10024: "❌ السعر غير صالح",
+            10025: "❌ Stop Loss غير صالح",
+            10026: "❌ Take Profit غير صالح",
+            10027: "⚠️ التداول التلقائي معطل - يجب تفعيله من Tools → Options → Expert Advisors",
+            10028: "❌ التداول التلقائي معطل من قبل الخادم",
+            10029: "❌ طلب محظور - الحساب للقراءة فقط",
+            10030: "❌ طلب محظور - التداول عبر الخبراء معطل",
+            10031: "❌ الحد الأقصى للصفقات المفتوحة",
+        }
+        
+        return error_messages.get(error_code, f"❌ خطأ {error_code}: {original_message}")
 
     def connect_auto(self) -> bool:
         """الاتصال التلقائي بالحساب المفتوح في MT5 Terminal"""
@@ -235,31 +312,218 @@ class MT5Manager:
 
         return None
 
+    def validate_trade_conditions(self, symbol: str, action: str, lot_size: float, 
+                                  entry_price: Optional[float], stop_loss: Optional[float], 
+                                  take_profit: Optional[float], order_type: str = "MARKET") -> Dict:
+        """
+        التحقق الشامل من شروط التداول قبل تنفيذ الصفقة
+        
+        Returns:
+            Dict مع 'valid': bool و 'errors': List[str] و 'warnings': List[str]
+        """
+        errors = []
+        warnings = []
+        
+        try:
+            # 1. التحقق من وجود الرمز
+            actual_symbol = self.find_symbol_in_platform(symbol)
+            if not actual_symbol:
+                errors.append(f"❌ الرمز {symbol} غير موجود في المنصة")
+                return {'valid': False, 'errors': errors, 'warnings': warnings}
+            
+            # 2. الحصول على معلومات الرمز
+            symbol_info = mt5.symbol_info(actual_symbol)
+            if symbol_info is None:
+                errors.append(f"❌ فشل الحصول على معلومات الرمز {actual_symbol}")
+                return {'valid': False, 'errors': errors, 'warnings': warnings}
+            
+            # 3. التحقق من أن التداول مسموح
+            if not symbol_info.trade_allowed:
+                errors.append(f"❌ التداول غير مسموح على الرمز {actual_symbol}")
+                errors.append("   السبب المحتمل: السوق مغلق أو الرمز معطل")
+            
+            # 4. التحقق من التداول عبر الخبراء
+            if hasattr(symbol_info, 'trade_expert') and not symbol_info.trade_expert:
+                errors.append(f"❌ التداول عبر الخبراء غير مسموح على {actual_symbol}")
+                errors.append("   يجب تفعيل 'Allow Algo Trading' في إعدادات الرمز")
+            
+            # 5. التحقق من حجم الصفقة
+            if lot_size < symbol_info.volume_min:
+                errors.append(f"❌ حجم الصفقة ({lot_size}) أقل من الحد الأدنى ({symbol_info.volume_min})")
+            elif lot_size > symbol_info.volume_max:
+                errors.append(f"❌ حجم الصفقة ({lot_size}) أكبر من الحد الأقصى ({symbol_info.volume_max})")
+            
+            # التحقق من خطوة الحجم
+            step = symbol_info.volume_step
+            remainder = round((lot_size / step) - int(lot_size / step), 10)
+            if remainder > 0.0001:  # هامش صغير للخطأ العشري
+                correct_size = round(lot_size / step) * step
+                warnings.append(f"⚠️ حجم الصفقة يجب أن يكون من مضاعفات {step}")
+                warnings.append(f"   القيمة المقترحة: {correct_size}")
+            
+            # 6. الحصول على السعر الحالي
+            tick = mt5.symbol_info_tick(actual_symbol)
+            if tick is None:
+                errors.append(f"❌ فشل الحصول على السعر الحالي للرمز {actual_symbol}")
+                return {'valid': False, 'errors': errors, 'warnings': warnings}
+            
+            current_price = tick.ask if action == 'BUY' else tick.bid
+            
+            # 7. التحقق من Stop Level (المسافة الدنيا للـ SL/TP)
+            stops_level = symbol_info.trade_stops_level
+            point = symbol_info.point
+            min_distance = stops_level * point
+            
+            if stops_level > 0:
+                # تحديد سعر المرجع
+                if order_type == "MARKET":
+                    reference_price = current_price
+                elif entry_price:
+                    reference_price = entry_price
+                else:
+                    reference_price = current_price
+                
+                # التحقق من SL
+                if stop_loss:
+                    sl_distance = abs(reference_price - stop_loss)
+                    if sl_distance < min_distance:
+                        errors.append(f"❌ المسافة بين Entry و SL ({sl_distance:.5f}) أقل من الحد الأدنى ({min_distance:.5f})")
+                        errors.append(f"   Stop Level: {stops_level} نقطة")
+                        suggested_sl = reference_price - (min_distance * 1.5) if action == 'BUY' else reference_price + (min_distance * 1.5)
+                        warnings.append(f"💡 SL مقترح: {suggested_sl:.5f}")
+                
+                # التحقق من TP
+                if take_profit:
+                    tp_distance = abs(reference_price - take_profit)
+                    if tp_distance < min_distance:
+                        errors.append(f"❌ المسافة بين Entry و TP ({tp_distance:.5f}) أقل من الحد الأدنى ({min_distance:.5f})")
+                        errors.append(f"   Stop Level: {stops_level} نقطة")
+                        suggested_tp = reference_price + (min_distance * 1.5) if action == 'BUY' else reference_price - (min_distance * 1.5)
+                        warnings.append(f"💡 TP مقترح: {suggested_tp:.5f}")
+            
+            # 8. التحقق من اتجاه SL/TP
+            if stop_loss and entry_price:
+                if action == 'BUY' and stop_loss >= entry_price:
+                    errors.append(f"❌ SL في صفقة BUY يجب أن يكون أقل من Entry")
+                    errors.append(f"   Entry: {entry_price}, SL: {stop_loss}")
+                elif action == 'SELL' and stop_loss <= entry_price:
+                    errors.append(f"❌ SL في صفقة SELL يجب أن يكون أعلى من Entry")
+                    errors.append(f"   Entry: {entry_price}, SL: {stop_loss}")
+            
+            if take_profit and entry_price:
+                if action == 'BUY' and take_profit <= entry_price:
+                    errors.append(f"❌ TP في صفقة BUY يجب أن يكون أعلى من Entry")
+                    errors.append(f"   Entry: {entry_price}, TP: {take_profit}")
+                elif action == 'SELL' and take_profit >= entry_price:
+                    errors.append(f"❌ TP في صفقة SELL يجب أن يكون أقل من Entry")
+                    errors.append(f"   Entry: {entry_price}, TP: {take_profit}")
+            
+            # 9. التحقق من الرؤية
+            if not symbol_info.visible:
+                warnings.append(f"⚠️ الرمز {actual_symbol} غير مرئي في Market Watch")
+                warnings.append("   سيتم تفعيله تلقائياً")
+            
+            # 10. معلومات إضافية
+            if symbol_info.spread > 100:
+                warnings.append(f"⚠️ السبريد مرتفع: {symbol_info.spread} نقطة")
+            
+            # النتيجة النهائية
+            is_valid = len(errors) == 0
+            
+            if is_valid and warnings:
+                print("\n" + "="*60)
+                print("✅ التحقق من شروط التداول: نجح")
+                print("="*60)
+                for warning in warnings:
+                    print(warning)
+                print("="*60 + "\n")
+            elif not is_valid:
+                print("\n" + "="*60)
+                print("❌ التحقق من شروط التداول: فشل")
+                print("="*60)
+                for error in errors:
+                    print(error)
+                if warnings:
+                    print("\n⚠️ تحذيرات:")
+                    for warning in warnings:
+                        print(warning)
+                print("="*60 + "\n")
+            
+            return {
+                'valid': is_valid,
+                'errors': errors,
+                'warnings': warnings,
+                'symbol_info': symbol_info,
+                'actual_symbol': actual_symbol,
+                'current_price': current_price,
+                'min_distance': min_distance
+            }
+            
+        except Exception as e:
+            errors.append(f"❌ خطأ في التحقق: {str(e)}")
+            return {'valid': False, 'errors': errors, 'warnings': warnings}
+
     def execute_signal(self, signal: Signal, lot_size: float = 0.01) -> Dict:
-        """تنفيذ إشارة تداول - مع دعم البحث الذكي عن الرموز"""
+        """تنفيذ إشارة تداول - مع دعم الأوامر المعلقة والفورية"""
         if not self.is_connected:
             return {'success': False, 'error': 'غير متصل بـ MT5'}
 
+        # إذا كان أمر معلق، استخدم دالة place_pending_order
+        if signal.order_type in ['BUY_LIMIT', 'SELL_LIMIT', 'BUY_STOP', 'SELL_STOP']:
+            return self.place_pending_order(signal, lot_size)
+
+        # الأوامر الفورية (MARKET)
         try:
-            # البحث الذكي عن الرمز في المنصة
-            actual_symbol = self.find_symbol_in_platform(signal.symbol)
-
-            if actual_symbol is None:
-                return {'success': False, 'error': f'الرمز {signal.symbol} غير موجود في المنصة'}
-
-            # الحصول على معلومات الرمز
-            symbol_info = mt5.symbol_info(actual_symbol)
-            if symbol_info is None:
-                return {'success': False, 'error': f'فشل الحصول على معلومات الرمز {actual_symbol}'}
-
+            # ===== 1. فحص وتفعيل التداول التلقائي =====
+            terminal_info = mt5.terminal_info()
+            if terminal_info and not terminal_info.trade_allowed:
+                print("⚠️ التداول التلقائي معطل - جاري التفعيل...")
+                # محاولة تفعيل التداول التلقائي
+                if not self._enable_auto_trading():
+                    return {
+                        'success': False,
+                        'error': 'التداول التلقائي معطل في MT5',
+                        'error_code': 10027,
+                        'fix_required': True,
+                        'fix_message': 'يرجى تفعيل التداول التلقائي يدوياً من: Tools -> Options -> Expert Advisors -> Allow automated trading'
+                    }
+            
+            # ===== 2. تحديد سعر الدخول المتوقع =====
+            if signal.entry_price:
+                entry_price = signal.entry_price
+            elif signal.entry_price_range:
+                entry_price = sum(signal.entry_price_range) / 2
+            else:
+                entry_price = None  # سيتم تحديده من السعر الحالي
+            
+            # ===== 3. التحقق الشامل من شروط التداول =====
+            validation = self.validate_trade_conditions(
+                symbol=signal.symbol,
+                action=signal.action,
+                lot_size=lot_size,
+                entry_price=entry_price,
+                stop_loss=signal.stop_loss,
+                take_profit=signal.take_profits[0] if signal.take_profits else None,
+                order_type="MARKET"
+            )
+            
+            if not validation['valid']:
+                error_msg = "فشل التحقق من شروط التداول:\n" + "\n".join(validation['errors'])
+                return {'success': False, 'error': error_msg, 'validation_errors': validation['errors']}
+            
+            # استخدام البيانات من التحقق
+            actual_symbol = validation['actual_symbol']
+            symbol_info = validation['symbol_info']
+            
+            # تفعيل الرمز إذا لم يكن مرئياً
             if not symbol_info.visible:
                 if not mt5.symbol_select(actual_symbol, True):
                     return {'success': False, 'error': f'فشل تفعيل الرمز {actual_symbol}'}
 
-            # تحديد نوع الأمر
+            # ===== 4. تحديد نوع الأمر =====
             order_type = mt5.ORDER_TYPE_BUY if signal.action == 'BUY' else mt5.ORDER_TYPE_SELL
 
-            # تحديد سعر الدخول
+            # ===== 5. تحديد سعر الدخول =====
             if signal.entry_price:
                 entry_price = signal.entry_price
             elif signal.entry_price_range:
@@ -272,7 +536,11 @@ class MT5Manager:
                 else:
                     entry_price = mt5.symbol_info_tick(actual_symbol).bid
 
-            # إعداد طلب التداول
+            # ===== 6. إعداد طلب التداول =====
+            # تنظيف التعليق لتجنب محارف غير صالحة
+            comment = f"Signal {signal.symbol}"
+            comment = comment.encode('ascii', 'ignore').decode('ascii')[:31]  # MT5 يقبل max 31 حرف
+            
             request = {
                 "action": mt5.TRADE_ACTION_DEAL,
                 "symbol": actual_symbol,  # استخدام الرمز الفعلي من المنصة
@@ -283,21 +551,25 @@ class MT5Manager:
                 "tp": signal.take_profits[0] if signal.take_profits else 0,  # أول TP
                 "deviation": 20,
                 "magic": 234000,
-                "comment": f"Signal: {signal.symbol} from {signal.channel_name}",  # حفظ الاسم الأصلي في التعليق
+                "comment": comment,
                 "type_time": mt5.ORDER_TIME_GTC,
                 "type_filling": mt5.ORDER_FILLING_IOC,
             }
 
-            # إرسال الطلب
+            # ===== 7. إرسال الطلب =====
             result = mt5.order_send(request)
 
             if result is None:
                 return {'success': False, 'error': 'فشل إرسال الطلب'}
 
             if result.retcode != mt5.TRADE_RETCODE_DONE:
+                # التعامل الذكي مع أخطاء محددة
+                error_msg = self._get_error_message(result.retcode, result.comment)
                 return {
                     'success': False,
-                    'error': f'فشل تنفيذ الطلب: {result.retcode} - {result.comment}'
+                    'error': error_msg,
+                    'error_code': result.retcode,
+                    'retcode': result.retcode
                 }
 
             # حفظ معلومات الصفقة
@@ -331,6 +603,187 @@ class MT5Manager:
 
         except Exception as e:
             print(f"❌ خطأ في تنفيذ الإشارة: {str(e)}")
+            return {'success': False, 'error': str(e)}
+
+    def place_pending_order(self, signal: Signal, lot_size: float = 0.01) -> Dict:
+        """وضع أمر معلق (Pending Order) - BUY_LIMIT, SELL_LIMIT, BUY_STOP, SELL_STOP"""
+        if not self.is_connected:
+            return {'success': False, 'error': 'غير متصل بـ MT5'}
+
+        try:
+            # ===== 1. فحص وتفعيل التداول التلقائي =====
+            terminal_info = mt5.terminal_info()
+            if terminal_info and not terminal_info.trade_allowed:
+                print("⚠️ التداول التلقائي معطل - جاري التفعيل...")
+                if not self._enable_auto_trading():
+                    return {
+                        'success': False,
+                        'error': 'التداول التلقائي معطل في MT5',
+                        'error_code': 10027,
+                        'fix_required': True,
+                        'fix_message': 'يرجى تفعيل التداول التلقائي يدوياً'
+                    }
+            
+            # ===== 2. التحقق من سعر الدخول =====
+            if not signal.entry_price:
+                return {'success': False, 'error': 'الأوامر المعلقة تحتاج لسعر دخول محدد'}
+            
+            # ===== 3. التحقق الشامل من شروط التداول =====
+            validation = self.validate_trade_conditions(
+                symbol=signal.symbol,
+                action=signal.action,
+                lot_size=lot_size,
+                entry_price=signal.entry_price,
+                stop_loss=signal.stop_loss,
+                take_profit=signal.take_profits[0] if signal.take_profits else None,
+                order_type=signal.order_type
+            )
+            
+            if not validation['valid']:
+                error_msg = "فشل التحقق من شروط التداول:\n" + "\n".join(validation['errors'])
+                return {'success': False, 'error': error_msg, 'validation_errors': validation['errors']}
+            
+            # استخدام البيانات من التحقق
+            actual_symbol = validation['actual_symbol']
+            symbol_info = validation['symbol_info']
+            current_price = validation['current_price']
+            
+            # تفعيل الرمز إذا لم يكن مرئياً
+            if not symbol_info.visible:
+                if not mt5.symbol_select(actual_symbol, True):
+                    return {'success': False, 'error': f'فشل تفعيل الرمز {actual_symbol}'}
+
+            # ===== 4. تحديد نوع الأمر المعلق =====
+            order_type_map = {
+                'BUY_LIMIT': mt5.ORDER_TYPE_BUY_LIMIT,
+                'SELL_LIMIT': mt5.ORDER_TYPE_SELL_LIMIT,
+                'BUY_STOP': mt5.ORDER_TYPE_BUY_STOP,
+                'SELL_STOP': mt5.ORDER_TYPE_SELL_STOP
+            }
+            
+            order_type = order_type_map.get(signal.order_type)
+            if order_type is None:
+                return {'success': False, 'error': f'نوع أمر غير صحيح: {signal.order_type}'}
+
+            # ===== 5. تحديد سعر الدخول =====
+            entry_price = signal.entry_price
+            
+            # ===== 6. التحقق من منطقية السعر للأمر المعلق =====
+            # حساب الفرق المسموح به (0.1% من السعر أو 20 نقطة، أيهما أكبر)
+            price_tolerance = max(entry_price * 0.001, symbol_info.point * 20)
+            
+            # التحقق من أن السعر منطقي لنوع الأمر (مع هامش تسامح)
+            if signal.order_type == 'BUY_LIMIT':
+                if entry_price > current_price + price_tolerance:
+                    return {'success': False, 'error': f'BUY LIMIT يجب أن يكون أقل من السعر الحالي ({current_price})'}
+            elif signal.order_type == 'SELL_LIMIT':
+                if entry_price < current_price - price_tolerance:
+                    return {'success': False, 'error': f'SELL LIMIT يجب أن يكون أعلى من السعر الحالي ({current_price})'}
+            elif signal.order_type == 'BUY_STOP':
+                if entry_price < current_price - price_tolerance:
+                    return {'success': False, 'error': f'BUY STOP يجب أن يكون أعلى من السعر الحالي ({current_price})'}
+            elif signal.order_type == 'SELL_STOP':
+                if entry_price > current_price + price_tolerance:
+                    return {'success': False, 'error': f'SELL STOP يجب أن يكون أقل من السعر الحالي ({current_price})'}
+            
+            # ملاحظة: إذا كان السعر قريب جداً من السعر الحالي، سيتم تنفيذه كأمر فوري تلقائياً من MT5
+
+            # طباعة معلومات تشخيصية
+            print(f"📊 معلومات الأمر المعلق:")
+            print(f"   الرمز: {actual_symbol}")
+            print(f"   النوع: {signal.order_type}")
+            print(f"   سعر الدخول: {entry_price}")
+            print(f"   السعر الحالي: {current_price}")
+            print(f"   الفرق: {abs(entry_price - current_price):.2f}")
+            
+            # معلومات Stop Level
+            if validation['min_distance'] > 0:
+                print(f"   Stop Level: {symbol_info.trade_stops_level} نقطة ({validation['min_distance']:.5f})")
+
+            # ===== 7. إعداد طلب الأمر المعلق =====
+            # تنظيف التعليق لتجنب محارف غير صالحة
+            channel_safe = signal.channel_name if signal.channel_name else "Unknown"
+            # إزالة المحارف الخاصة والعربية (MT5 يدعم ASCII فقط في comment)
+            comment = f"Pending {signal.order_type} {signal.symbol}"
+            comment = comment.encode('ascii', 'ignore').decode('ascii')[:31]  # MT5 يقبل max 31 حرف
+            
+            # تحديد نوع التعبئة المناسب
+            filling_type = symbol_info.filling_mode
+            if filling_type & 1:  # ORDER_FILLING_FOK
+                type_filling = mt5.ORDER_FILLING_FOK
+            elif filling_type & 2:  # ORDER_FILLING_IOC
+                type_filling = mt5.ORDER_FILLING_IOC
+            else:  # ORDER_FILLING_RETURN (default)
+                type_filling = mt5.ORDER_FILLING_RETURN
+            
+            request = {
+                "action": mt5.TRADE_ACTION_PENDING,
+                "symbol": actual_symbol,
+                "volume": lot_size,
+                "type": order_type,
+                "price": entry_price,
+                "sl": signal.stop_loss,
+                "tp": signal.take_profits[0] if signal.take_profits else 0,
+                "deviation": 20,
+                "magic": 234000,
+                "comment": comment,
+                "type_time": mt5.ORDER_TIME_GTC,
+                "type_filling": type_filling,
+            }
+
+            # ===== 8. إرسال الطلب =====
+            result = mt5.order_send(request)
+
+            if result is None:
+                last_error = mt5.last_error()
+                error_msg = f'فشل إرسال الأمر المعلق: {last_error}'
+                print(f"❌ {error_msg}")
+                return {'success': False, 'error': error_msg}
+
+            if result.retcode != mt5.TRADE_RETCODE_DONE:
+                error_msg = self._get_error_message(result.retcode, result.comment)
+                print(f"❌ رمز الخطأ: {result.retcode} - {error_msg}")
+                print(f"   التعليق: {result.comment}")
+                return {
+                    'success': False,
+                    'error': error_msg,
+                    'error_code': result.retcode,
+                    'retcode': result.retcode
+                }
+
+            # ===== 9. حفظ معلومات الأمر المعلق =====
+            order_info = {
+                'ticket': result.order,
+                'signal': signal.__dict__,
+                'placed_at': datetime.now().isoformat(),
+                'entry_price': entry_price,
+                'lot_size': lot_size,
+                'order_type': signal.order_type,
+                'status': 'pending'
+            }
+
+            with self.lock:
+                self.active_positions[result.order] = order_info
+                self.save_trades()
+
+            # عرض رسالة نجاح
+            symbol_display = f"{signal.symbol} ({actual_symbol})" if actual_symbol != signal.symbol else signal.symbol
+            print(f"✅ تم وضع أمر معلق {signal.order_type} على {symbol_display}")
+            print(f"   التذكرة: {result.order}")
+            print(f"   سعر الدخول: {entry_price}")
+            print(f"   السعر الحالي: {current_price}")
+
+            return {
+                'success': True,
+                'ticket': result.order,
+                'entry_price': entry_price,
+                'current_price': current_price,
+                'actual_symbol': actual_symbol,
+                'order_info': order_info
+            }
+
+        except Exception as e:
+            print(f"❌ خطأ في وضع الأمر المعلق: {str(e)}")
             return {'success': False, 'error': str(e)}
 
     def start_trailing_stop(self):
@@ -576,6 +1029,196 @@ class MT5Manager:
         except Exception as e:
             print(f"❌ خطأ في الحصول على معلومات الحساب: {str(e)}")
             return None
+
+    def get_symbol_properties(self, symbol: str, verbose: bool = True) -> Optional[Dict]:
+        """
+        الحصول على خصائص رمز معين من MT5
+        
+        Args:
+            symbol: اسم الرمز (مثل XAUUSD)
+            verbose: طباعة التفاصيل
+            
+        Returns:
+            Dict مع جميع خصائص الرمز أو None
+        """
+        if not self.is_connected:
+            print("❌ غير متصل بـ MT5")
+            return None
+
+        try:
+            # البحث عن الرمز الفعلي في المنصة
+            actual_symbol = self.find_symbol_in_platform(symbol)
+            if not actual_symbol:
+                print(f"❌ الرمز {symbol} غير موجود في المنصة")
+                return None
+
+            # الحصول على معلومات الرمز
+            symbol_info = mt5.symbol_info(actual_symbol)
+            if symbol_info is None:
+                print(f"❌ فشل الحصول على معلومات الرمز {actual_symbol}")
+                return None
+
+            # تجهيز البيانات
+            properties = {
+                'symbol': actual_symbol,
+                'original_symbol': symbol,
+                'description': symbol_info.description if hasattr(symbol_info, 'description') else '',
+                'path': symbol_info.path if hasattr(symbol_info, 'path') else '',
+                'trade_allowed': symbol_info.trade_allowed,
+                'trade_expert': symbol_info.trade_expert if hasattr(symbol_info, 'trade_expert') else False,
+                'volume_min': symbol_info.volume_min,
+                'volume_max': symbol_info.volume_max,
+                'volume_step': symbol_info.volume_step,
+                'digits': symbol_info.digits,
+                'trade_stops_level': symbol_info.trade_stops_level,
+                'spread': symbol_info.spread,
+                'point': symbol_info.point,
+                'tick_size': symbol_info.trade_tick_size,
+                'tick_value': symbol_info.trade_tick_value,
+                'contract_size': symbol_info.trade_contract_size,
+                'currency_base': symbol_info.currency_base if hasattr(symbol_info, 'currency_base') else '',
+                'currency_profit': symbol_info.currency_profit if hasattr(symbol_info, 'currency_profit') else '',
+                'currency_margin': symbol_info.currency_margin if hasattr(symbol_info, 'currency_margin') else '',
+                'margin_initial': symbol_info.margin_initial if hasattr(symbol_info, 'margin_initial') else 0,
+                'margin_maintenance': symbol_info.margin_maintenance if hasattr(symbol_info, 'margin_maintenance') else 0,
+                'filling_mode': symbol_info.filling_mode,
+                'order_mode': symbol_info.order_mode,
+                'visible': symbol_info.visible,
+                'timestamp': datetime.now().isoformat()
+            }
+
+            # طباعة التقرير
+            if verbose:
+                print("\n" + "="*70)
+                print(f"📊 تقرير خصائص الرمز: {actual_symbol}")
+                print("="*70)
+                
+                if properties['description']:
+                    print(f"📝 الوصف: {properties['description']}")
+                
+                print(f"\n🔧 إعدادات التداول:")
+                print(f"   ✅ التداول مسموح: {'نعم' if properties['trade_allowed'] else '❌ لا'}")
+                print(f"   🤖 التداول عبر الخبراء: {'نعم' if properties['trade_expert'] else '❌ لا'}")
+                print(f"   👁️ الرمز مرئي: {'نعم' if properties['visible'] else '❌ لا'}")
+                
+                print(f"\n📏 أحجام الصفقات:")
+                print(f"   الحد الأدنى: {properties['volume_min']} لوت")
+                print(f"   الحد الأقصى: {properties['volume_max']} لوت")
+                print(f"   خطوة الحجم: {properties['volume_step']} لوت")
+                
+                print(f"\n💰 معلومات السعر:")
+                print(f"   عدد الأرقام العشرية: {properties['digits']}")
+                print(f"   حجم النقطة (Point): {properties['point']}")
+                print(f"   حجم الـ Tick: {properties['tick_size']}")
+                print(f"   قيمة الـ Tick: {properties['tick_value']}")
+                print(f"   حجم العقد: {properties['contract_size']}")
+                
+                print(f"\n📊 معلومات السوق:")
+                print(f"   Spread الحالي: {properties['spread']} نقطة")
+                print(f"   Stop Level: {properties['trade_stops_level']} نقطة")
+                
+                print(f"\n💵 العملات:")
+                print(f"   عملة الأساس: {properties['currency_base']}")
+                print(f"   عملة الربح: {properties['currency_profit']}")
+                print(f"   عملة الهامش: {properties['currency_margin']}")
+                
+                if properties['margin_initial'] > 0:
+                    print(f"\n💳 الهامش:")
+                    print(f"   الهامش الأولي: {properties['margin_initial']}")
+                    print(f"   هامش الصيانة: {properties['margin_maintenance']}")
+                
+                # معلومات أنواع التعبئة
+                filling_modes = []
+                if properties['filling_mode'] & 1:
+                    filling_modes.append("FOK")
+                if properties['filling_mode'] & 2:
+                    filling_modes.append("IOC")
+                if properties['filling_mode'] & 4:
+                    filling_modes.append("RETURN")
+                
+                print(f"\n⚙️ أوضاع التعبئة المدعومة:")
+                print(f"   {', '.join(filling_modes) if filling_modes else 'غير محدد'}")
+                
+                print("="*70 + "\n")
+
+            return properties
+
+        except Exception as e:
+            print(f"❌ خطأ في الحصول على خصائص الرمز: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            return None
+
+    def save_symbol_properties(self, symbol: str) -> bool:
+        """حفظ خصائص الرمز في ملف JSON"""
+        try:
+            properties = self.get_symbol_properties(symbol, verbose=False)
+            if not properties:
+                return False
+
+            # قراءة الملف الحالي
+            if os.path.exists(self.symbols_info_file):
+                with open(self.symbols_info_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+            else:
+                data = {}
+
+            # إضافة/تحديث الرمز
+            data[properties['symbol']] = properties
+
+            # حفظ الملف
+            with open(self.symbols_info_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+
+            print(f"✅ تم حفظ خصائص الرمز {symbol} في {self.symbols_info_file}")
+            return True
+
+        except Exception as e:
+            print(f"❌ خطأ في حفظ خصائص الرمز: {str(e)}")
+            return False
+
+    def get_all_symbols_properties(self, save_to_file: bool = True) -> Dict:
+        """
+        الحصول على خصائص جميع الرموز المتاحة
+        
+        Args:
+            save_to_file: حفظ في ملف JSON
+            
+        Returns:
+            Dict مع خصائص جميع الرموز
+        """
+        if not self.is_connected:
+            print("❌ غير متصل بـ MT5")
+            return {}
+
+        try:
+            all_symbols = mt5.symbols_get()
+            if not all_symbols:
+                print("❌ لم يتم العثور على رموز")
+                return {}
+
+            print(f"🔍 جاري فحص {len(all_symbols)} رمز...")
+            
+            results = {}
+            for symbol_info in all_symbols:
+                symbol_name = symbol_info.name
+                properties = self.get_symbol_properties(symbol_name, verbose=False)
+                if properties:
+                    results[symbol_name] = properties
+
+            print(f"✅ تم الحصول على خصائص {len(results)} رمز")
+
+            # حفظ في ملف
+            if save_to_file:
+                with open(self.symbols_info_file, 'w', encoding='utf-8') as f:
+                    json.dump(results, f, ensure_ascii=False, indent=4)
+                print(f"✅ تم حفظ البيانات في {self.symbols_info_file}")
+
+            return results
+
+        except Exception as e:
+            print(f"❌ خطأ في الحصول على خصائص الرموز: {str(e)}")
+            return {}
 
     def get_today_statistics(self) -> Dict:
         """إحصائيات تداول اليوم"""
